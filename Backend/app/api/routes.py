@@ -1,16 +1,12 @@
-"""
-Módulo de rutas API para el backend municipal_agent.
+import os
+import re
+import io
+import uuid
+import asyncio
+import PyPDF2
 
-Contiene endpoints para:
-- Registro e inicio de sesión de ciudadanos (/login).
-- Interacción con el agente inteligente (/chat).
-- Limpieza de la conversación para continuar tras derivación a humano (/limpiar).
-
-Incluye validación, saneamiento de datos, manejo de sesiones y simulación de derivación a humano.
-"""
-
-from blacksheep import Response, Request
-from blacksheep.server.responses import json
+from blacksheep import Response, Request, StreamedContent
+from blacksheep.server.responses import json, text
 from app.db.crud import (
     crear_sesion,
     guardar_consulta_respuesta,
@@ -18,28 +14,167 @@ from app.db.crud import (
     crear_ciudadano,
     obtener_sesion_por_token,
 )
-from app.agents.agno_agent import AgnoMunicipalAgent
 from app.utils.helpers import generar_embedding, sanitizar_texto
-import asyncio
-import uuid
-import PyPDF2
-import io 
-agent_instance = AgnoMunicipalAgent()
+from app.agents.agno_agent import AgnoMunicipalAgent
 
+import logging
+logger = logging.getLogger("upload")
+# Variable global para la instancia del agente, se inicializa en startup
+agent_instance = None
 
+# Variable temporal para almacenar el texto del PDF
+pdf_text_temp = ""
+
+# Estado simple en memoria para simular bloqueo por derivación a humano
 conversaciones_derivadas = set()
 
-
-async def generate_token_stream(response_text: str):
+async def init_agent():
     """
-    Generador asíncrono que simula el streaming token a token de la respuesta.
-
-    :param response_text: Texto completo de la respuesta.
-    :yield: Tokens individuales con un pequeño retardo para simular streaming.
+    Inicializa la instancia global del agente AgnoMunicipalAgent.
     """
-    for token in response_text.split():
-        yield token + " "
-        await asyncio.sleep(0.05)
+    global agent_instance
+    from app.db.connection import db
+
+    OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+    if not OPENROUTER_API_KEY:
+        raise RuntimeError("La variable de entorno OPENROUTER_API_KEY no está configurada")
+
+    agent_instance = AgnoMunicipalAgent(db.pool, OPENROUTER_API_KEY)
+
+
+async def parse_confianza(respuesta: str) -> float:
+    """
+    Extrae un valor de confianza numérico de la respuesta del agente.
+
+    :param respuesta: Texto de la respuesta.
+    :return: Valor de confianza entre 0 y 1.
+    """
+    match = re.search(r"Confianza[:\s]+(\d+(\.\d+)?)(%)?", respuesta, re.IGNORECASE)
+    if match:
+        valor = float(match.group(1))
+        if match.group(3) == '%':
+            return valor / 100
+        return valor
+    return 0.8
+
+
+async def chat(request: Request) -> Response:
+    """
+    Endpoint POST /chat para interactuar con el agente municipal.
+
+    Recibe JSON con pregunta, ciudadano_id y token_sesion.
+    Valida sesión, filtra preguntas, genera embedding, y responde con streaming real.
+    Maneja derivación a humano si la confianza es baja.
+
+    :param request: Objeto Request con JSON.
+    :return: Response con streaming de texto.
+    """
+    global agent_instance
+    global pdf_text_temp
+
+    if agent_instance is None:
+        return Response(text="Servicio no disponible. Intente más tarde.", status=503)
+
+    print("[Chat] Petición recibida")
+    try:
+        data = await request.json()
+    except Exception:
+        return Response(text="JSON inválido.", status=400)
+
+    pregunta = data.get("pregunta")
+    ciudadano_id = data.get("ciudadano_id")
+    token_sesion = data.get("token_sesion")
+    print(f"[Chat] Pregunta recibida: {pregunta}")
+    if not pregunta or not ciudadano_id or not token_sesion:
+        return Response(text="Faltan parámetros obligatorios.", status=400)
+
+    sesion = await obtener_sesion_por_token(token_sesion)
+    if not sesion or sesion['ciudadano_id'] != ciudadano_id:
+        return Response(text="Sesión inválida o expirada.", status=401)
+
+    pregunta = sanitizar_texto(pregunta)
+
+    key = (ciudadano_id, token_sesion)
+    if key in conversaciones_derivadas:
+        mensaje = "Uno de nuestros colaboradores se pondrá en contacto en breve, por favor espere."
+
+        async def stream_msg():
+            yield mensaje.encode("utf-8")
+
+        return Response(
+            200,
+            content=StreamedContent(b"text/plain", stream_msg)
+        )
+
+    embedding = await generar_embedding(pregunta)
+
+    # Agregar el texto del PDF al contexto
+    contexto_adicional = pdf_text_temp
+    # Limpiar la variable temporal
+    pdf_text_temp = ""
+
+    try:
+        async def stream_response():
+            async for fragmento in agent_instance.responder_stream(pregunta, embedding, contexto_adicional):
+                print(f"[Agente] Respuesta parcial: {fragmento.decode('utf-8')}")
+                yield fragmento
+
+        return Response(
+            200,
+            content=StreamedContent(b"text/plain", stream_response)
+        )
+    except Exception:
+        # Fallback a búsqueda en internet si falla streaming
+        resultado = await agent_instance.buscar_en_internet(pregunta)
+        confianza = await parse_confianza(resultado)
+        if confianza < 0.6:
+            conversaciones_derivadas.add(key)
+            mensaje = "No estoy seguro de la respuesta. En breve lo atenderá un ser humano."
+
+            async def stream_msg():
+                yield mensaje.encode("utf-8")
+
+            return Response(
+                200,
+                content=StreamedContent(b"text/plain", stream_msg)
+            )
+
+        await guardar_consulta_respuesta(sesion['id'], pregunta, resultado, confianza)
+
+        async def stream_response():
+            for token in resultado.split():
+                yield (token + " ").encode("utf-8")
+                await asyncio.sleep(0.05)
+
+        return Response(
+            200,
+            content=StreamedContent(b"text/plain", stream_response)
+        )
+
+
+
+async def limpiar_conversacion(request: Request) -> Response:
+    """
+    Endpoint POST /limpiar para limpiar la conversación y permitir continuar tras derivación a humano.
+
+    :param request: Objeto Request con JSON.
+    :return: JSON con mensaje de confirmación.
+    """
+    try:
+        data = await request.json()
+    except Exception:
+        return Response(400, text="JSON inválido.")
+
+    ciudadano_id = data.get("ciudadano_id")
+    token_sesion = data.get("token_sesion")
+
+    if not ciudadano_id or not token_sesion:
+        return Response(400, text="Faltan parámetros obligatorios.")
+
+    key = (ciudadano_id, token_sesion)
+    conversaciones_derivadas.discard(key)
+
+    return json({"mensaje": "Conversación limpiada, puede continuar."}, status=200)
 
 
 async def login(request: Request) -> Response:
@@ -92,140 +227,71 @@ async def login(request: Request) -> Response:
     return json({"ciudadano_id": ciudadano_id, "token_sesion": token_sesion}, status=200)
 
 
-async def chat(request: Request) -> Response:
+async def upload(request: Request):
     """
-    Endpoint POST /chat para interactuar con el agente inteligente municipal.
+    Actualmente no funciona
+    POST /upload — Subir un único PDF y extraer su texto usando FormPart.content_type y .content.
 
-    JSON esperado:
-    {
-        "pregunta": "Texto de la pregunta",
-        "ciudadano_id": 123,
-        "token_sesion": "token-uuid"
-    }
-
-    Respuesta:
-    Streaming token a token con la respuesta generada por el agente.
-
-    Si la conversación está derivada a humano, se envía un mensaje especial y el agente no responde.
-    Se valida que la sesión exista y pertenezca al ciudadano para mayor seguridad.
+    1. Comprueba que el servicio está listo.
+    2. await request.form(), imprime keys para debug.
+    3. Toma form['archivo'] (lista de FormPart) y coge el primero.
+    4. Lee content_type desde part.content_type y decodifica si es bytes.
+    5. Valida 'application/pdf'; si falla → 400.
+    6. Lee contenido_bytes = part.content.
+    7. Extrae texto con PyPDF2 y guarda en pdf_text_temp.
+    8. Devuelve JSON de éxito.
     """
-    try:
-        data = await request.json()
-    except Exception:
-        return Response(400, text="JSON inválido.")
+    global agent_instance, pdf_text_temp
 
-    pregunta = data.get("pregunta")
-    ciudadano_id = data.get("ciudadano_id")
-    token_sesion = data.get("token_sesion")
+    # 1) Servicio disponible?
+    if agent_instance is None:
+        return text("Servicio no disponible. Intente más tarde.", status=503)
 
-    if not pregunta or not ciudadano_id or not token_sesion:
-        return Response(400, text="Faltan parámetros obligatorios.")
-
-    # Validar que la sesión existe y pertenece al ciudadano
-    sesion = await obtener_sesion_por_token(token_sesion)
-    if not sesion or sesion['ciudadano_id'] != ciudadano_id:
-        return Response(401, text="Sesión inválida o expirada.")
-
-    # Sanitizar la pregunta para evitar inyección
-    pregunta = sanitizar_texto(pregunta)
-
-    key = (ciudadano_id, token_sesion)
-    if key in conversaciones_derivadas:
-        mensaje = "Uno de nuestros colaboradores se pondrá en contacto en breve, por favor espere."
-        async def stream_msg():
-            yield mensaje
-        return Response(text_stream(stream_msg()), content_type="text/plain")
-
-    # Generar embedding de la pregunta
-    embedding = await generar_embedding(pregunta)
-
-    # Obtener respuesta del agente
-    resultado = await agent_instance.responder(pregunta, embedding)
-
-    # Si la confianza es baja, marcar la conversación como derivada a humano
-    if resultado["derivar_humano"]:
-        conversaciones_derivadas.add(key)
-
-    # Guardar consulta y respuesta en la base de datos
-    await guardar_consulta_respuesta(sesion['id'], pregunta, resultado["respuesta"], resultado["confianza"])
-
-    # Stream de tokens para la respuesta
-    
-    async def stream_response():
-        async for token in generate_token_stream(resultado["respuesta"]):
-            yield token
-
-    return Response(stream_response(), content_type="text/plain")
-
-
-async def limpiar_conversacion(request: Request) -> Response:
-    """
-    Endpoint POST /limpiar para limpiar la conversación y permitir continuar tras derivación a humano.
-
-    JSON esperado:
-    {
-        "ciudadano_id": 123,
-        "token_sesion": "token-uuid"
-    }
-
-    Respuesta JSON:
-    {
-        "mensaje": "Conversación limpiada, puede continuar."
-    }
-    """
-    try:
-        data = await request.json()
-    except Exception:
-        return Response(400, text="JSON inválido.")
-
-    ciudadano_id = data.get("ciudadano_id")
-    token_sesion = data.get("token_sesion")
-
-    if not ciudadano_id or not token_sesion:
-        return Response(400, text="Faltan parámetros obligatorios.")
-
-    key = (ciudadano_id, token_sesion)
-    conversaciones_derivadas.discard(key)
-
-    return Response(200, json={"mensaje": "Conversación limpiada, puede continuar."})
-
-
-
-async def upload(request: Request) -> Response:
-    """
-    Endpoint POST /upload para recibir un archivo y una pregunta,
-    extraer texto del archivo y responder usando el agente con contexto adicional.
-
-    Recibe multipart/form-data con:
-    - archivo: archivo a procesar (PDF soportado)
-    - pregunta: texto de la pregunta
-    - ciudadano_id: id del ciudadano (para validación si se desea)
-    - token_sesion: token de sesión (para validación si se desea)
-
-    No guarda el archivo, solo lo procesa en memoria.
-    """
+    # 2) Leer multipart completo
     form = await request.form()
-    archivo = form.get("archivo")
-    pregunta = form.get("pregunta")
-    ciudadano_id = form.get("ciudadano_id")
-    token_sesion = form.get("token_sesion")
+    print("DEBUG: keys en form()", list(form.keys()))
 
-    if not archivo or not pregunta or not ciudadano_id or not token_sesion:
-        return Response(400, text="Faltan parámetros obligatorios.")
+    # 3) Sacar lista de FormPart bajo 'archivo'
+    archivos = form.get("archivo")
+    if not archivos or not isinstance(archivos, list):
+        print("DEBUG: form['archivo'] no es lista o está vacío:", archivos)
+        return text("Falta el archivo PDF.", status=400)
 
-    pregunta = sanitizar_texto(pregunta)
+    part = archivos[0]
+    print("DEBUG: primer elemento de archivos:", type(part), repr(part))
 
-    contenido_texto = ""
-
-    if archivo.content_type == "application/pdf":
-        contenido_bytes = await archivo.read()
-        pdf_reader = PyPDF2.PdfReader(io.BytesIO(contenido_bytes))
-        textos = [page.extract_text() or "" for page in pdf_reader.pages]
-        contenido_texto = "\n".join(textos)
+    # 4) Leer y decodificar content_type
+    raw_ct = part.content_type
+    if isinstance(raw_ct, (bytes, bytearray)):
+        content_type = raw_ct.decode("latin1").split(";", 1)[0].strip().lower()
     else:
-        return Response(400, text="Tipo de archivo no soportado. Solo PDF.")
+        content_type = raw_ct.split(";", 1)[0].strip().lower()
+    print("DEBUG: content_type detectado:", content_type)
 
-    # Llamar al agente con contexto adicional
-    resultado = await agent_instance.responder(pregunta, contexto_adicional=contenido_texto)
+    # 5) Validar PDF
+    if content_type != "application/pdf":
+        print("DEBUG: MIME no es PDF")
+        return text("Tipo de archivo no soportado. Solo PDF.", status=400)
 
-    return Response(200, json={"respuesta": resultado["respuesta"], "confianza": resultado["confianza"]})
+    # 6) Leer bytes desde part.content
+    contenido_bytes = part.content
+    if not isinstance(contenido_bytes, (bytes, bytearray)):
+        print("DEBUG: part.content no es bytes:", type(contenido_bytes))
+        return text("Error al leer el contenido del archivo.", status=400)
+    print("DEBUG: bytes leídos:", len(contenido_bytes))
+
+    # 7) Extraer texto con PyPDF2
+    try:
+        reader = PyPDF2.PdfReader(io.BytesIO(contenido_bytes))
+    except Exception as e:
+        print("DEBUG: fallo PyPDF2.PdfReader:", e)
+        return text("Error al leer el PDF.", status=400)
+
+    paginas = [page.extract_text() or "" for page in reader.pages]
+    texto_completo = "\n".join(paginas)
+    print("DEBUG: caracteres extraídos:", len(texto_completo))
+
+    pdf_text_temp = texto_completo
+
+    # 8) Responder éxito
+    return json({"mensaje": "Texto del PDF guardado."}, status=200)

@@ -9,43 +9,47 @@
         "documentation": {}
     },
     {
-        "label": "Agent",
-        "importPath": "agno.agent",
-        "description": "agno.agent",
+        "label": "asyncio",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "agno.agent",
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
         "documentation": {}
     },
     {
-        "label": "OpenRouter",
-        "importPath": "agno.models.openrouter",
-        "description": "agno.models.openrouter",
+        "label": "json",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "agno.models.openrouter",
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
-        "label": "db",
-        "importPath": "app.db.connection",
-        "description": "app.db.connection",
+        "label": "numpy",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "app.db.connection",
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
         "documentation": {}
     },
     {
-        "label": "db",
-        "importPath": "app.db.connection",
-        "description": "app.db.connection",
+        "label": "httpx",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "app.db.connection",
+        "importPath": "httpx",
+        "description": "httpx",
+        "detail": "httpx",
         "documentation": {}
     },
     {
-        "label": "db",
-        "importPath": "app.db.connection",
-        "description": "app.db.connection",
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
         "isExtraImport": true,
-        "detail": "app.db.connection",
+        "detail": "openai",
         "documentation": {}
     },
     {
@@ -113,11 +117,55 @@
         "documentation": {}
     },
     {
+        "label": "generar_embedding",
+        "importPath": "app.utils.helpers",
+        "description": "app.utils.helpers",
+        "isExtraImport": true,
+        "detail": "app.utils.helpers",
+        "documentation": {}
+    },
+    {
         "label": "sanitizar_texto",
         "importPath": "app.utils.helpers",
         "description": "app.utils.helpers",
         "isExtraImport": true,
         "detail": "app.utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "PyPDF2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "detail": "PyPDF2",
         "documentation": {}
     },
     {
@@ -130,6 +178,14 @@
     },
     {
         "label": "Request",
+        "importPath": "blacksheep",
+        "description": "blacksheep",
+        "isExtraImport": true,
+        "detail": "blacksheep",
+        "documentation": {}
+    },
+    {
+        "label": "StreamedContent",
         "importPath": "blacksheep",
         "description": "blacksheep",
         "isExtraImport": true,
@@ -161,6 +217,14 @@
         "documentation": {}
     },
     {
+        "label": "text",
+        "importPath": "blacksheep.server.responses",
+        "description": "blacksheep.server.responses",
+        "isExtraImport": true,
+        "detail": "blacksheep.server.responses",
+        "documentation": {}
+    },
+    {
         "label": "Response",
         "importPath": "blacksheep.server.responses",
         "description": "blacksheep.server.responses",
@@ -177,39 +241,12 @@
         "documentation": {}
     },
     {
-        "label": "asyncio",
+        "label": "logging",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "asyncio",
-        "description": "asyncio",
-        "detail": "asyncio",
-        "documentation": {}
-    },
-    {
-        "label": "uuid",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "uuid",
-        "description": "uuid",
-        "detail": "uuid",
-        "documentation": {}
-    },
-    {
-        "label": "PyPDF2",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "PyPDF2",
-        "description": "PyPDF2",
-        "detail": "PyPDF2",
-        "documentation": {}
-    },
-    {
-        "label": "io",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "io",
-        "description": "io",
-        "detail": "io",
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
         "documentation": {}
     },
     {
@@ -374,6 +411,22 @@
         "documentation": {}
     },
     {
+        "label": "db",
+        "importPath": "app.db.connection",
+        "description": "app.db.connection",
+        "isExtraImport": true,
+        "detail": "app.db.connection",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "app.db.connection",
+        "description": "app.db.connection",
+        "isExtraImport": true,
+        "detail": "app.db.connection",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -395,15 +448,6 @@
         "description": "sentence_transformers",
         "isExtraImport": true,
         "detail": "sentence_transformers",
-        "documentation": {}
-    },
-    {
-        "label": "re",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "re",
-        "description": "re",
-        "detail": "re",
         "documentation": {}
     },
     {
@@ -455,6 +499,14 @@
         "documentation": {}
     },
     {
+        "label": "init_agent",
+        "importPath": "app.api.routes",
+        "description": "app.api.routes",
+        "isExtraImport": true,
+        "detail": "app.api.routes",
+        "documentation": {}
+    },
+    {
         "label": "uvicorn",
         "kind": 6,
         "isExtraImport": true,
@@ -464,12 +516,12 @@
         "documentation": {}
     },
     {
-        "label": "logging",
+        "label": "traceback",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "logging",
-        "description": "logging",
-        "detail": "logging",
+        "importPath": "traceback",
+        "description": "traceback",
+        "detail": "traceback",
         "documentation": {}
     },
     {
@@ -711,15 +763,6 @@
         "documentation": {}
     },
     {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
         "label": "requests",
         "kind": 6,
         "isExtraImport": true,
@@ -749,7 +792,7 @@
         "kind": 6,
         "importPath": "Backend.app.agents.agno_agent",
         "description": "Backend.app.agents.agno_agent",
-        "peekOfCode": "class VectorSearchTool:\n    \"\"\"\n    Herramienta para búsqueda vectorial en la tabla documentos usando pgvector.\n    Esta clase permite realizar consultas vectoriales en la base de datos PostgreSQL\n    para obtener documentos relevantes según un embedding de consulta.\n    \"\"\"\n    def __init__(self, pool):\n        \"\"\"\n        Inicializa la herramienta con el pool de conexiones a la base de datos.\n        :param pool: Pool de conexiones async a PostgreSQL.",
+        "peekOfCode": "class VectorSearchTool:\n    \"\"\"\n    Herramienta para búsqueda vectorial en la tabla documentos usando pgvector.\n    Permite consultas vectoriales en PostgreSQL para obtener documentos relevantes.\n    \"\"\"\n    def __init__(self, pool):\n        \"\"\"\n        Inicializa la herramienta con el pool de conexiones async a la base de datos.\n        :param pool: Pool de conexiones async a PostgreSQL.\n        \"\"\"",
         "detail": "Backend.app.agents.agno_agent",
         "documentation": {}
     },
@@ -758,7 +801,7 @@
         "kind": 6,
         "importPath": "Backend.app.agents.agno_agent",
         "description": "Backend.app.agents.agno_agent",
-        "peekOfCode": "class AgnoMunicipalAgent:\n    \"\"\"\n    Clase que encapsula el agente Agno configurado para el agente municipal.\n    Integra un modelo LLM gratuito de OpenRouter y herramientas de búsqueda vectorial\n    y FAQs para responder preguntas de ciudadanos con contexto relevante.\n    \"\"\"\n    def __init__(self):\n        \"\"\"\n        Inicializa el agente con el modelo OpenRouter gratuito y la herramienta de búsqueda vectorial.\n        \"\"\"",
+        "peekOfCode": "class AgnoMunicipalAgent:\n    \"\"\"\n    Clase que encapsula el agente Agno configurado para el agente municipal.\n    Integra modelo LLM OpenRouter, búsqueda vectorial, gestión de contexto,\n    resumen, fragmentación, filtrado y búsqueda en internet con filtro geográfico.\n    \"\"\"\n    def __init__(self, pool, api_key: str):\n        \"\"\"\n        Inicializa el agente con cliente OpenAI para OpenRouter y búsqueda vectorial.\n        :param pool: Pool de conexiones async a PostgreSQL.",
         "detail": "Backend.app.agents.agno_agent",
         "documentation": {}
     },
@@ -767,8 +810,17 @@
         "kind": 5,
         "importPath": "Backend.app.agents.agno_agent",
         "description": "Backend.app.agents.agno_agent",
-        "peekOfCode": "OPENROUTER_API_KEY = os.getenv(\"OPENROUTER_API_KEY\")\nclass VectorSearchTool:\n    \"\"\"\n    Herramienta para búsqueda vectorial en la tabla documentos usando pgvector.\n    Esta clase permite realizar consultas vectoriales en la base de datos PostgreSQL\n    para obtener documentos relevantes según un embedding de consulta.\n    \"\"\"\n    def __init__(self, pool):\n        \"\"\"\n        Inicializa la herramienta con el pool de conexiones a la base de datos.",
+        "peekOfCode": "OPENROUTER_API_KEY = os.getenv(\"OPENROUTER_API_KEY\")\nclass VectorSearchTool:\n    \"\"\"\n    Herramienta para búsqueda vectorial en la tabla documentos usando pgvector.\n    Permite consultas vectoriales en PostgreSQL para obtener documentos relevantes.\n    \"\"\"\n    def __init__(self, pool):\n        \"\"\"\n        Inicializa la herramienta con el pool de conexiones async a la base de datos.\n        :param pool: Pool de conexiones async a PostgreSQL.",
         "detail": "Backend.app.agents.agno_agent",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "Backend.app.api.routes",
+        "description": "Backend.app.api.routes",
+        "peekOfCode": "logger = logging.getLogger(\"upload\")\n# Variable global para la instancia del agente, se inicializa en startup\nagent_instance = None\n# Variable temporal para almacenar el texto del PDF\npdf_text_temp = \"\"\n# Estado simple en memoria para simular bloqueo por derivación a humano\nconversaciones_derivadas = set()\nasync def init_agent():\n    \"\"\"\n    Inicializa la instancia global del agente AgnoMunicipalAgent.",
+        "detail": "Backend.app.api.routes",
         "documentation": {}
     },
     {
@@ -776,7 +828,16 @@
         "kind": 5,
         "importPath": "Backend.app.api.routes",
         "description": "Backend.app.api.routes",
-        "peekOfCode": "agent_instance = AgnoMunicipalAgent()\nconversaciones_derivadas = set()\nasync def generate_token_stream(response_text: str):\n    \"\"\"\n    Generador asíncrono que simula el streaming token a token de la respuesta.\n    :param response_text: Texto completo de la respuesta.\n    :yield: Tokens individuales con un pequeño retardo para simular streaming.\n    \"\"\"\n    for token in response_text.split():\n        yield token + \" \"",
+        "peekOfCode": "agent_instance = None\n# Variable temporal para almacenar el texto del PDF\npdf_text_temp = \"\"\n# Estado simple en memoria para simular bloqueo por derivación a humano\nconversaciones_derivadas = set()\nasync def init_agent():\n    \"\"\"\n    Inicializa la instancia global del agente AgnoMunicipalAgent.\n    \"\"\"\n    global agent_instance",
+        "detail": "Backend.app.api.routes",
+        "documentation": {}
+    },
+    {
+        "label": "pdf_text_temp",
+        "kind": 5,
+        "importPath": "Backend.app.api.routes",
+        "description": "Backend.app.api.routes",
+        "peekOfCode": "pdf_text_temp = \"\"\n# Estado simple en memoria para simular bloqueo por derivación a humano\nconversaciones_derivadas = set()\nasync def init_agent():\n    \"\"\"\n    Inicializa la instancia global del agente AgnoMunicipalAgent.\n    \"\"\"\n    global agent_instance\n    from app.db.connection import db\n    OPENROUTER_API_KEY = os.getenv(\"OPENROUTER_API_KEY\")",
         "detail": "Backend.app.api.routes",
         "documentation": {}
     },
@@ -785,7 +846,7 @@
         "kind": 5,
         "importPath": "Backend.app.api.routes",
         "description": "Backend.app.api.routes",
-        "peekOfCode": "conversaciones_derivadas = set()\nasync def generate_token_stream(response_text: str):\n    \"\"\"\n    Generador asíncrono que simula el streaming token a token de la respuesta.\n    :param response_text: Texto completo de la respuesta.\n    :yield: Tokens individuales con un pequeño retardo para simular streaming.\n    \"\"\"\n    for token in response_text.split():\n        yield token + \" \"\n        await asyncio.sleep(0.05)",
+        "peekOfCode": "conversaciones_derivadas = set()\nasync def init_agent():\n    \"\"\"\n    Inicializa la instancia global del agente AgnoMunicipalAgent.\n    \"\"\"\n    global agent_instance\n    from app.db.connection import db\n    OPENROUTER_API_KEY = os.getenv(\"OPENROUTER_API_KEY\")\n    if not OPENROUTER_API_KEY:\n        raise RuntimeError(\"La variable de entorno OPENROUTER_API_KEY no está configurada\")",
         "detail": "Backend.app.api.routes",
         "documentation": {}
     },
@@ -893,8 +954,89 @@
         "kind": 5,
         "importPath": "Backend.app.main",
         "description": "Backend.app.main",
-        "peekOfCode": "app = Application()\nasync def cors_middleware(request, handler):\n    \"\"\"\n    Middleware para manejar CORS (Cross-Origin Resource Sharing).\n    Intercepta todas las solicitudes y añade cabeceras CORS necesarias para permitir\n    solicitudes desde el origen http://localhost:3000. Responde directamente a solicitudes OPTIONS\n    con los headers adecuados para evitar bloqueos en navegadores.\n    Args:\n        request (Request): Objeto de la solicitud entrante.\n        handler (Callable): Siguiente manejador en la cadena de middlewares.",
+        "peekOfCode": "app = Application()\nasync def cors_middleware(request, handler):\n    \"\"\"\n    Middleware para manejar CORS (Cross-Origin Resource Sharing).\n    Intercepta todas las solicitudes y añade cabeceras CORS necesarias para permitir\n    solicitudes desde cualquier origen. Responde directamente a solicitudes OPTIONS\n    con los headers adecuados para evitar bloqueos en navegadores.\n    Además, captura excepciones para asegurar que siempre se envíen los headers CORS.\n    \"\"\"\n    if request.method == \"OPTIONS\":",
         "detail": "Backend.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "project",
+        "kind": 5,
+        "importPath": "Backend.docs.conf",
+        "description": "Backend.docs.conf",
+        "peekOfCode": "project = 'Agente_genesis'\ncopyright = '2025, Bryan Sosa'\nauthor = 'Bryan Sosa'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = []\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------",
+        "detail": "Backend.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "copyright",
+        "kind": 5,
+        "importPath": "Backend.docs.conf",
+        "description": "Backend.docs.conf",
+        "peekOfCode": "copyright = '2025, Bryan Sosa'\nauthor = 'Bryan Sosa'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = []\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output",
+        "detail": "Backend.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "author",
+        "kind": 5,
+        "importPath": "Backend.docs.conf",
+        "description": "Backend.docs.conf",
+        "peekOfCode": "author = 'Bryan Sosa'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = []\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'alabaster'",
+        "detail": "Backend.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "extensions",
+        "kind": 5,
+        "importPath": "Backend.docs.conf",
+        "description": "Backend.docs.conf",
+        "peekOfCode": "extensions = []\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'alabaster'\nhtml_static_path = ['_static']",
+        "detail": "Backend.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "templates_path",
+        "kind": 5,
+        "importPath": "Backend.docs.conf",
+        "description": "Backend.docs.conf",
+        "peekOfCode": "templates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'alabaster'\nhtml_static_path = ['_static']",
+        "detail": "Backend.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "exclude_patterns",
+        "kind": 5,
+        "importPath": "Backend.docs.conf",
+        "description": "Backend.docs.conf",
+        "peekOfCode": "exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'alabaster'\nhtml_static_path = ['_static']",
+        "detail": "Backend.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "language",
+        "kind": 5,
+        "importPath": "Backend.docs.conf",
+        "description": "Backend.docs.conf",
+        "peekOfCode": "language = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'alabaster'\nhtml_static_path = ['_static']",
+        "detail": "Backend.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_theme",
+        "kind": 5,
+        "importPath": "Backend.docs.conf",
+        "description": "Backend.docs.conf",
+        "peekOfCode": "html_theme = 'alabaster'\nhtml_static_path = ['_static']",
+        "detail": "Backend.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_static_path",
+        "kind": 5,
+        "importPath": "Backend.docs.conf",
+        "description": "Backend.docs.conf",
+        "peekOfCode": "html_static_path = ['_static']",
+        "detail": "Backend.docs.conf",
         "documentation": {}
     },
     {
