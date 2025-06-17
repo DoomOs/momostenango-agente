@@ -1,0 +1,1154 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Agent",
+        "importPath": "agno.agent",
+        "description": "agno.agent",
+        "isExtraImport": true,
+        "detail": "agno.agent",
+        "documentation": {}
+    },
+    {
+        "label": "OpenRouter",
+        "importPath": "agno.models.openrouter",
+        "description": "agno.models.openrouter",
+        "isExtraImport": true,
+        "detail": "agno.models.openrouter",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "app.db.connection",
+        "description": "app.db.connection",
+        "isExtraImport": true,
+        "detail": "app.db.connection",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "app.db.connection",
+        "description": "app.db.connection",
+        "isExtraImport": true,
+        "detail": "app.db.connection",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "app.db.connection",
+        "description": "app.db.connection",
+        "isExtraImport": true,
+        "detail": "app.db.connection",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_faqs",
+        "importPath": "app.db.crud",
+        "description": "app.db.crud",
+        "isExtraImport": true,
+        "detail": "app.db.crud",
+        "documentation": {}
+    },
+    {
+        "label": "crear_sesion",
+        "importPath": "app.db.crud",
+        "description": "app.db.crud",
+        "isExtraImport": true,
+        "detail": "app.db.crud",
+        "documentation": {}
+    },
+    {
+        "label": "guardar_consulta_respuesta",
+        "importPath": "app.db.crud",
+        "description": "app.db.crud",
+        "isExtraImport": true,
+        "detail": "app.db.crud",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_ciudadano_por_email",
+        "importPath": "app.db.crud",
+        "description": "app.db.crud",
+        "isExtraImport": true,
+        "detail": "app.db.crud",
+        "documentation": {}
+    },
+    {
+        "label": "crear_ciudadano",
+        "importPath": "app.db.crud",
+        "description": "app.db.crud",
+        "isExtraImport": true,
+        "detail": "app.db.crud",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_sesion_por_token",
+        "importPath": "app.db.crud",
+        "description": "app.db.crud",
+        "isExtraImport": true,
+        "detail": "app.db.crud",
+        "documentation": {}
+    },
+    {
+        "label": "sanitizar_texto",
+        "importPath": "app.utils.helpers",
+        "description": "app.utils.helpers",
+        "isExtraImport": true,
+        "detail": "app.utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "generar_embedding",
+        "importPath": "app.utils.helpers",
+        "description": "app.utils.helpers",
+        "isExtraImport": true,
+        "detail": "app.utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "sanitizar_texto",
+        "importPath": "app.utils.helpers",
+        "description": "app.utils.helpers",
+        "isExtraImport": true,
+        "detail": "app.utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "blacksheep",
+        "description": "blacksheep",
+        "isExtraImport": true,
+        "detail": "blacksheep",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "blacksheep",
+        "description": "blacksheep",
+        "isExtraImport": true,
+        "detail": "blacksheep",
+        "documentation": {}
+    },
+    {
+        "label": "Application",
+        "importPath": "blacksheep",
+        "description": "blacksheep",
+        "isExtraImport": true,
+        "detail": "blacksheep",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "importPath": "blacksheep.server.responses",
+        "description": "blacksheep.server.responses",
+        "isExtraImport": true,
+        "detail": "blacksheep.server.responses",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "importPath": "blacksheep.server.responses",
+        "description": "blacksheep.server.responses",
+        "isExtraImport": true,
+        "detail": "blacksheep.server.responses",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "blacksheep.server.responses",
+        "description": "blacksheep.server.responses",
+        "isExtraImport": true,
+        "detail": "blacksheep.server.responses",
+        "documentation": {}
+    },
+    {
+        "label": "AgnoMunicipalAgent",
+        "importPath": "app.agents.agno_agent",
+        "description": "app.agents.agno_agent",
+        "isExtraImport": true,
+        "detail": "app.agents.agno_agent",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "PyPDF2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "asyncpg",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncpg",
+        "description": "asyncpg",
+        "detail": "asyncpg",
+        "documentation": {}
+    },
+    {
+        "label": "register_vector",
+        "importPath": "pgvector.asyncpg",
+        "description": "pgvector.asyncpg",
+        "isExtraImport": true,
+        "detail": "pgvector.asyncpg",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_URL",
+        "importPath": "app.config",
+        "description": "app.config",
+        "isExtraImport": true,
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Container",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TextIO",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "cast",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Container",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "SentenceTransformer",
+        "importPath": "sentence_transformers",
+        "description": "sentence_transformers",
+        "isExtraImport": true,
+        "detail": "sentence_transformers",
+        "documentation": {}
+    },
+    {
+        "label": "SentenceTransformer",
+        "importPath": "sentence_transformers",
+        "description": "sentence_transformers",
+        "isExtraImport": true,
+        "detail": "sentence_transformers",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "chat",
+        "importPath": "app.api.routes",
+        "description": "app.api.routes",
+        "isExtraImport": true,
+        "detail": "app.api.routes",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "app.api.routes",
+        "description": "app.api.routes",
+        "isExtraImport": true,
+        "detail": "app.api.routes",
+        "documentation": {}
+    },
+    {
+        "label": "limpiar_conversacion",
+        "importPath": "app.api.routes",
+        "description": "app.api.routes",
+        "isExtraImport": true,
+        "detail": "app.api.routes",
+        "documentation": {}
+    },
+    {
+        "label": "upload",
+        "importPath": "app.api.routes",
+        "description": "app.api.routes",
+        "isExtraImport": true,
+        "detail": "app.api.routes",
+        "documentation": {}
+    },
+    {
+        "label": "uvicorn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uvicorn",
+        "description": "uvicorn",
+        "detail": "uvicorn",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "os.path",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os.path",
+        "description": "os.path",
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "ArgumentParser",
+        "importPath": "argparse",
+        "description": "argparse",
+        "isExtraImport": true,
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "pdfminer",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pdfminer",
+        "description": "pdfminer",
+        "detail": "pdfminer",
+        "documentation": {}
+    },
+    {
+        "label": "PDFDocument",
+        "importPath": "pdfminer.pdfdocument",
+        "description": "pdfminer.pdfdocument",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfdocument",
+        "documentation": {}
+    },
+    {
+        "label": "PDFNoOutlines",
+        "importPath": "pdfminer.pdfdocument",
+        "description": "pdfminer.pdfdocument",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfdocument",
+        "documentation": {}
+    },
+    {
+        "label": "PDFXRefFallback",
+        "importPath": "pdfminer.pdfdocument",
+        "description": "pdfminer.pdfdocument",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfdocument",
+        "documentation": {}
+    },
+    {
+        "label": "PDFIOError",
+        "importPath": "pdfminer.pdfexceptions",
+        "description": "pdfminer.pdfexceptions",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfexceptions",
+        "documentation": {}
+    },
+    {
+        "label": "PDFObjectNotFound",
+        "importPath": "pdfminer.pdfexceptions",
+        "description": "pdfminer.pdfexceptions",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfexceptions",
+        "documentation": {}
+    },
+    {
+        "label": "PDFTypeError",
+        "importPath": "pdfminer.pdfexceptions",
+        "description": "pdfminer.pdfexceptions",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfexceptions",
+        "documentation": {}
+    },
+    {
+        "label": "PDFValueError",
+        "importPath": "pdfminer.pdfexceptions",
+        "description": "pdfminer.pdfexceptions",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfexceptions",
+        "documentation": {}
+    },
+    {
+        "label": "PDFValueError",
+        "importPath": "pdfminer.pdfexceptions",
+        "description": "pdfminer.pdfexceptions",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfexceptions",
+        "documentation": {}
+    },
+    {
+        "label": "PDFPage",
+        "importPath": "pdfminer.pdfpage",
+        "description": "pdfminer.pdfpage",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfpage",
+        "documentation": {}
+    },
+    {
+        "label": "PDFParser",
+        "importPath": "pdfminer.pdfparser",
+        "description": "pdfminer.pdfparser",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfparser",
+        "documentation": {}
+    },
+    {
+        "label": "PDFObjRef",
+        "importPath": "pdfminer.pdftypes",
+        "description": "pdfminer.pdftypes",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdftypes",
+        "documentation": {}
+    },
+    {
+        "label": "PDFStream",
+        "importPath": "pdfminer.pdftypes",
+        "description": "pdfminer.pdftypes",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdftypes",
+        "documentation": {}
+    },
+    {
+        "label": "resolve1",
+        "importPath": "pdfminer.pdftypes",
+        "description": "pdfminer.pdftypes",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdftypes",
+        "documentation": {}
+    },
+    {
+        "label": "stream_value",
+        "importPath": "pdfminer.pdftypes",
+        "description": "pdfminer.pdftypes",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdftypes",
+        "documentation": {}
+    },
+    {
+        "label": "LIT",
+        "importPath": "pdfminer.psparser",
+        "description": "pdfminer.psparser",
+        "isExtraImport": true,
+        "detail": "pdfminer.psparser",
+        "documentation": {}
+    },
+    {
+        "label": "PSKeyword",
+        "importPath": "pdfminer.psparser",
+        "description": "pdfminer.psparser",
+        "isExtraImport": true,
+        "detail": "pdfminer.psparser",
+        "documentation": {}
+    },
+    {
+        "label": "PSLiteral",
+        "importPath": "pdfminer.psparser",
+        "description": "pdfminer.psparser",
+        "isExtraImport": true,
+        "detail": "pdfminer.psparser",
+        "documentation": {}
+    },
+    {
+        "label": "isnumber",
+        "importPath": "pdfminer.utils",
+        "description": "pdfminer.utils",
+        "isExtraImport": true,
+        "detail": "pdfminer.utils",
+        "documentation": {}
+    },
+    {
+        "label": "AnyIO",
+        "importPath": "pdfminer.utils",
+        "description": "pdfminer.utils",
+        "isExtraImport": true,
+        "detail": "pdfminer.utils",
+        "documentation": {}
+    },
+    {
+        "label": "pdfminer.high_level",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pdfminer.high_level",
+        "description": "pdfminer.high_level",
+        "detail": "pdfminer.high_level",
+        "documentation": {}
+    },
+    {
+        "label": "LAParams",
+        "importPath": "pdfminer.layout",
+        "description": "pdfminer.layout",
+        "isExtraImport": true,
+        "detail": "pdfminer.layout",
+        "documentation": {}
+    },
+    {
+        "label": "register_vector",
+        "importPath": "pgvector.psycopg2",
+        "description": "pgvector.psycopg2",
+        "isExtraImport": true,
+        "detail": "pgvector.psycopg2",
+        "documentation": {}
+    },
+    {
+        "label": "psycopg2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "psycopg2",
+        "description": "psycopg2",
+        "detail": "psycopg2",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "VectorSearchTool",
+        "kind": 6,
+        "importPath": "app.agents.agno_agent",
+        "description": "app.agents.agno_agent",
+        "peekOfCode": "class VectorSearchTool:\n    \"\"\"\n    Herramienta para búsqueda vectorial en la tabla documentos usando pgvector.\n    Esta clase permite realizar consultas vectoriales en la base de datos PostgreSQL\n    para obtener documentos relevantes según un embedding de consulta.\n    \"\"\"\n    def __init__(self, pool):\n        \"\"\"\n        Inicializa la herramienta con el pool de conexiones a la base de datos.\n        :param pool: Pool de conexiones async a PostgreSQL.",
+        "detail": "app.agents.agno_agent",
+        "documentation": {}
+    },
+    {
+        "label": "AgnoMunicipalAgent",
+        "kind": 6,
+        "importPath": "app.agents.agno_agent",
+        "description": "app.agents.agno_agent",
+        "peekOfCode": "class AgnoMunicipalAgent:\n    \"\"\"\n    Clase que encapsula el agente Agno configurado para el agente municipal.\n    Integra un modelo LLM gratuito de OpenRouter y herramientas de búsqueda vectorial\n    y FAQs para responder preguntas de ciudadanos con contexto relevante.\n    \"\"\"\n    def __init__(self):\n        \"\"\"\n        Inicializa el agente con el modelo OpenRouter gratuito y la herramienta de búsqueda vectorial.\n        \"\"\"",
+        "detail": "app.agents.agno_agent",
+        "documentation": {}
+    },
+    {
+        "label": "OPENROUTER_API_KEY",
+        "kind": 5,
+        "importPath": "app.agents.agno_agent",
+        "description": "app.agents.agno_agent",
+        "peekOfCode": "OPENROUTER_API_KEY = os.getenv(\"OPENROUTER_API_KEY\")\nclass VectorSearchTool:\n    \"\"\"\n    Herramienta para búsqueda vectorial en la tabla documentos usando pgvector.\n    Esta clase permite realizar consultas vectoriales en la base de datos PostgreSQL\n    para obtener documentos relevantes según un embedding de consulta.\n    \"\"\"\n    def __init__(self, pool):\n        \"\"\"\n        Inicializa la herramienta con el pool de conexiones a la base de datos.",
+        "detail": "app.agents.agno_agent",
+        "documentation": {}
+    },
+    {
+        "label": "agent_instance",
+        "kind": 5,
+        "importPath": "app.api.routes",
+        "description": "app.api.routes",
+        "peekOfCode": "agent_instance = AgnoMunicipalAgent()\nconversaciones_derivadas = set()\nasync def generate_token_stream(response_text: str):\n    \"\"\"\n    Generador asíncrono que simula el streaming token a token de la respuesta.\n    :param response_text: Texto completo de la respuesta.\n    :yield: Tokens individuales con un pequeño retardo para simular streaming.\n    \"\"\"\n    for token in response_text.split():\n        yield token + \" \"",
+        "detail": "app.api.routes",
+        "documentation": {}
+    },
+    {
+        "label": "conversaciones_derivadas",
+        "kind": 5,
+        "importPath": "app.api.routes",
+        "description": "app.api.routes",
+        "peekOfCode": "conversaciones_derivadas = set()\nasync def generate_token_stream(response_text: str):\n    \"\"\"\n    Generador asíncrono que simula el streaming token a token de la respuesta.\n    :param response_text: Texto completo de la respuesta.\n    :yield: Tokens individuales con un pequeño retardo para simular streaming.\n    \"\"\"\n    for token in response_text.split():\n        yield token + \" \"\n        await asyncio.sleep(0.05)",
+        "detail": "app.api.routes",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "kind": 6,
+        "importPath": "app.db.connection",
+        "description": "app.db.connection",
+        "peekOfCode": "class Database:\n    \"\"\"\n    Clase para manejar el pool de conexiones a PostgreSQL.\n    \"\"\"\n    def __init__(self):\n        self.pool = None\n    async def connect(self):\n        \"\"\"\n        Inicializa el pool de conexiones y registra la extensión vector.\n        \"\"\"",
+        "detail": "app.db.connection",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "app.db.connection",
+        "description": "app.db.connection",
+        "peekOfCode": "db = Database()",
+        "detail": "app.db.connection",
+        "documentation": {}
+    },
+    {
+        "label": "sanitizar_texto",
+        "kind": 2,
+        "importPath": "app.utils.helpers",
+        "description": "app.utils.helpers",
+        "peekOfCode": "def sanitizar_texto(texto: str) -> str:\n    \"\"\"\n    Sanitiza texto para evitar inyección y caracteres no deseados.\n    :param texto: Texto original.\n    :return: Texto sanitizado.\n    \"\"\"\n    # Elimina caracteres no imprimibles y recorta espacios\n    texto = re.sub(r'[^\\x20-\\x7E]+', ' ', texto)\n    texto = texto.strip()\n    return texto",
+        "detail": "app.utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "app.utils.helpers",
+        "description": "app.utils.helpers",
+        "peekOfCode": "model = SentenceTransformer('all-MiniLM-L6-v2')\nasync def generar_embedding(texto: str) -> list:\n    \"\"\"\n    Genera un embedding para un texto dado usando sentence-transformers.\n    :param texto: Texto a vectorizar.\n    :return: Lista de floats representando el embedding.\n    \"\"\"\n    loop = asyncio.get_event_loop()\n    embedding = await loop.run_in_executor(None, model.encode, texto)\n    return embedding.tolist()",
+        "detail": "app.utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "POSTGRES_HOST",
+        "kind": 5,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "POSTGRES_HOST = os.getenv(\"POSTGRES_HOST\", \"localhost\")\nPOSTGRES_DB = os.getenv(\"POSTGRES_DB\", \"municipal_agent\")\nPOSTGRES_USER = os.getenv(\"POSTGRES_USER\", \"postgres\")\nPOSTGRES_PASSWORD = os.getenv(\"POSTGRES_PASSWORD\", \"\")\nPOSTGRES_PORT = os.getenv(\"POSTGRES_PORT\", \"5432\")\nOPENROUTER_API_KEY = os.getenv(\"OPENROUTER_API_KEY\", \"\")\nDATABASE_URL = (\n    f\"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}\"\n)",
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "POSTGRES_DB",
+        "kind": 5,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "POSTGRES_DB = os.getenv(\"POSTGRES_DB\", \"municipal_agent\")\nPOSTGRES_USER = os.getenv(\"POSTGRES_USER\", \"postgres\")\nPOSTGRES_PASSWORD = os.getenv(\"POSTGRES_PASSWORD\", \"\")\nPOSTGRES_PORT = os.getenv(\"POSTGRES_PORT\", \"5432\")\nOPENROUTER_API_KEY = os.getenv(\"OPENROUTER_API_KEY\", \"\")\nDATABASE_URL = (\n    f\"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}\"\n)",
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "POSTGRES_USER",
+        "kind": 5,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "POSTGRES_USER = os.getenv(\"POSTGRES_USER\", \"postgres\")\nPOSTGRES_PASSWORD = os.getenv(\"POSTGRES_PASSWORD\", \"\")\nPOSTGRES_PORT = os.getenv(\"POSTGRES_PORT\", \"5432\")\nOPENROUTER_API_KEY = os.getenv(\"OPENROUTER_API_KEY\", \"\")\nDATABASE_URL = (\n    f\"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}\"\n)",
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "POSTGRES_PASSWORD",
+        "kind": 5,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "POSTGRES_PASSWORD = os.getenv(\"POSTGRES_PASSWORD\", \"\")\nPOSTGRES_PORT = os.getenv(\"POSTGRES_PORT\", \"5432\")\nOPENROUTER_API_KEY = os.getenv(\"OPENROUTER_API_KEY\", \"\")\nDATABASE_URL = (\n    f\"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}\"\n)",
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "POSTGRES_PORT",
+        "kind": 5,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "POSTGRES_PORT = os.getenv(\"POSTGRES_PORT\", \"5432\")\nOPENROUTER_API_KEY = os.getenv(\"OPENROUTER_API_KEY\", \"\")\nDATABASE_URL = (\n    f\"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}\"\n)",
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "OPENROUTER_API_KEY",
+        "kind": 5,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "OPENROUTER_API_KEY = os.getenv(\"OPENROUTER_API_KEY\", \"\")\nDATABASE_URL = (\n    f\"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}\"\n)",
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_URL",
+        "kind": 5,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "DATABASE_URL = (\n    f\"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}\"\n)",
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "app = Application()\nasync def cors_middleware(request, handler):\n    \"\"\"\n    Middleware para manejar CORS (Cross-Origin Resource Sharing).\n    Intercepta todas las solicitudes y añade cabeceras CORS necesarias para permitir\n    solicitudes desde el origen http://localhost:3000. Responde directamente a solicitudes OPTIONS\n    con los headers adecuados para evitar bloqueos en navegadores.\n    Args:\n        request (Request): Objeto de la solicitud entrante.\n        handler (Callable): Siguiente manejador en la cadena de middlewares.",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "escape",
+        "kind": 2,
+        "importPath": "venv.Scripts.dumppdf",
+        "description": "venv.Scripts.dumppdf",
+        "peekOfCode": "def escape(s: Union[str, bytes]) -> str:\n    if isinstance(s, bytes):\n        us = str(s, \"latin-1\")\n    else:\n        us = s\n    return ESC_PAT.sub(lambda m: \"&#%d;\" % ord(m.group(0)), us)\ndef dumpxml(out: TextIO, obj: object, codec: Optional[str] = None) -> None:\n    if obj is None:\n        out.write(\"<null />\")\n        return",
+        "detail": "venv.Scripts.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "dumpxml",
+        "kind": 2,
+        "importPath": "venv.Scripts.dumppdf",
+        "description": "venv.Scripts.dumppdf",
+        "peekOfCode": "def dumpxml(out: TextIO, obj: object, codec: Optional[str] = None) -> None:\n    if obj is None:\n        out.write(\"<null />\")\n        return\n    if isinstance(obj, dict):\n        out.write('<dict size=\"%d\">\\n' % len(obj))\n        for k, v in obj.items():\n            out.write(\"<key>%s</key>\\n\" % k)\n            out.write(\"<value>\")\n            dumpxml(out, v)",
+        "detail": "venv.Scripts.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "dumptrailers",
+        "kind": 2,
+        "importPath": "venv.Scripts.dumppdf",
+        "description": "venv.Scripts.dumppdf",
+        "peekOfCode": "def dumptrailers(\n    out: TextIO,\n    doc: PDFDocument,\n    show_fallback_xref: bool = False,\n) -> None:\n    for xref in doc.xrefs:\n        if not isinstance(xref, PDFXRefFallback) or show_fallback_xref:\n            out.write(\"<trailer>\\n\")\n            dumpxml(out, xref.get_trailer())\n            out.write(\"\\n</trailer>\\n\\n\")",
+        "detail": "venv.Scripts.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "dumpallobjs",
+        "kind": 2,
+        "importPath": "venv.Scripts.dumppdf",
+        "description": "venv.Scripts.dumppdf",
+        "peekOfCode": "def dumpallobjs(\n    out: TextIO,\n    doc: PDFDocument,\n    codec: Optional[str] = None,\n    show_fallback_xref: bool = False,\n) -> None:\n    visited = set()\n    out.write(\"<pdf>\")\n    for xref in doc.xrefs:\n        for objid in xref.get_objids():",
+        "detail": "venv.Scripts.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "dumpoutline",
+        "kind": 2,
+        "importPath": "venv.Scripts.dumppdf",
+        "description": "venv.Scripts.dumppdf",
+        "peekOfCode": "def dumpoutline(\n    outfp: TextIO,\n    fname: str,\n    objids: Any,\n    pagenos: Container[int],\n    password: str = \"\",\n    dumpall: bool = False,\n    codec: Optional[str] = None,\n    extractdir: Optional[str] = None,\n) -> None:",
+        "detail": "venv.Scripts.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "extractembedded",
+        "kind": 2,
+        "importPath": "venv.Scripts.dumppdf",
+        "description": "venv.Scripts.dumppdf",
+        "peekOfCode": "def extractembedded(fname: str, password: str, extractdir: str) -> None:\n    def extract1(objid: int, obj: Dict[str, Any]) -> None:\n        filename = os.path.basename(obj.get(\"UF\") or cast(bytes, obj.get(\"F\")).decode())\n        fileref = obj[\"EF\"].get(\"UF\") or obj[\"EF\"].get(\"F\")\n        fileobj = doc.getobj(fileref.objid)\n        if not isinstance(fileobj, PDFStream):\n            error_msg = (\n                \"unable to process PDF: reference for %r is not a \"\n                \"PDFStream\" % filename\n            )",
+        "detail": "venv.Scripts.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "dumppdf",
+        "kind": 2,
+        "importPath": "venv.Scripts.dumppdf",
+        "description": "venv.Scripts.dumppdf",
+        "peekOfCode": "def dumppdf(\n    outfp: TextIO,\n    fname: str,\n    objids: Iterable[int],\n    pagenos: Container[int],\n    password: str = \"\",\n    dumpall: bool = False,\n    codec: Optional[str] = None,\n    extractdir: Optional[str] = None,\n    show_fallback_xref: bool = False,",
+        "detail": "venv.Scripts.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "create_parser",
+        "kind": 2,
+        "importPath": "venv.Scripts.dumppdf",
+        "description": "venv.Scripts.dumppdf",
+        "peekOfCode": "def create_parser() -> ArgumentParser:\n    parser = ArgumentParser(description=__doc__, add_help=True)\n    parser.add_argument(\n        \"files\",\n        type=str,\n        default=None,\n        nargs=\"+\",\n        help=\"One or more paths to PDF files.\",\n    )\n    parser.add_argument(",
+        "detail": "venv.Scripts.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "venv.Scripts.dumppdf",
+        "description": "venv.Scripts.dumppdf",
+        "peekOfCode": "def main(argv: Optional[List[str]] = None) -> None:\n    parser = create_parser()\n    args = parser.parse_args(args=argv)\n    if args.debug:\n        logging.getLogger().setLevel(logging.DEBUG)\n    if args.outfile == \"-\":\n        outfp = sys.stdout\n    else:\n        outfp = open(args.outfile, \"w\")\n    if args.objects:",
+        "detail": "venv.Scripts.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "venv.Scripts.dumppdf",
+        "description": "venv.Scripts.dumppdf",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nESC_PAT = re.compile(r'[\\000-\\037&<>()\"\\042\\047\\134\\177-\\377]')\ndef escape(s: Union[str, bytes]) -> str:\n    if isinstance(s, bytes):\n        us = str(s, \"latin-1\")\n    else:\n        us = s\n    return ESC_PAT.sub(lambda m: \"&#%d;\" % ord(m.group(0)), us)\ndef dumpxml(out: TextIO, obj: object, codec: Optional[str] = None) -> None:\n    if obj is None:",
+        "detail": "venv.Scripts.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "ESC_PAT",
+        "kind": 5,
+        "importPath": "venv.Scripts.dumppdf",
+        "description": "venv.Scripts.dumppdf",
+        "peekOfCode": "ESC_PAT = re.compile(r'[\\000-\\037&<>()\"\\042\\047\\134\\177-\\377]')\ndef escape(s: Union[str, bytes]) -> str:\n    if isinstance(s, bytes):\n        us = str(s, \"latin-1\")\n    else:\n        us = s\n    return ESC_PAT.sub(lambda m: \"&#%d;\" % ord(m.group(0)), us)\ndef dumpxml(out: TextIO, obj: object, codec: Optional[str] = None) -> None:\n    if obj is None:\n        out.write(\"<null />\")",
+        "detail": "venv.Scripts.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "LITERAL_FILESPEC",
+        "kind": 5,
+        "importPath": "venv.Scripts.dumppdf",
+        "description": "venv.Scripts.dumppdf",
+        "peekOfCode": "LITERAL_FILESPEC = LIT(\"Filespec\")\nLITERAL_EMBEDDEDFILE = LIT(\"EmbeddedFile\")\ndef extractembedded(fname: str, password: str, extractdir: str) -> None:\n    def extract1(objid: int, obj: Dict[str, Any]) -> None:\n        filename = os.path.basename(obj.get(\"UF\") or cast(bytes, obj.get(\"F\")).decode())\n        fileref = obj[\"EF\"].get(\"UF\") or obj[\"EF\"].get(\"F\")\n        fileobj = doc.getobj(fileref.objid)\n        if not isinstance(fileobj, PDFStream):\n            error_msg = (\n                \"unable to process PDF: reference for %r is not a \"",
+        "detail": "venv.Scripts.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "LITERAL_EMBEDDEDFILE",
+        "kind": 5,
+        "importPath": "venv.Scripts.dumppdf",
+        "description": "venv.Scripts.dumppdf",
+        "peekOfCode": "LITERAL_EMBEDDEDFILE = LIT(\"EmbeddedFile\")\ndef extractembedded(fname: str, password: str, extractdir: str) -> None:\n    def extract1(objid: int, obj: Dict[str, Any]) -> None:\n        filename = os.path.basename(obj.get(\"UF\") or cast(bytes, obj.get(\"F\")).decode())\n        fileref = obj[\"EF\"].get(\"UF\") or obj[\"EF\"].get(\"F\")\n        fileobj = doc.getobj(fileref.objid)\n        if not isinstance(fileobj, PDFStream):\n            error_msg = (\n                \"unable to process PDF: reference for %r is not a \"\n                \"PDFStream\" % filename",
+        "detail": "venv.Scripts.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "float_or_disabled",
+        "kind": 2,
+        "importPath": "venv.Scripts.pdf2txt",
+        "description": "venv.Scripts.pdf2txt",
+        "peekOfCode": "def float_or_disabled(x: str) -> Optional[float]:\n    if x.lower().strip() == \"disabled\":\n        return None\n    try:\n        return float(x)\n    except ValueError:\n        raise argparse.ArgumentTypeError(f\"invalid float value: {x}\")\ndef extract_text(\n    files: Iterable[str] = [],\n    outfile: str = \"-\",",
+        "detail": "venv.Scripts.pdf2txt",
+        "documentation": {}
+    },
+    {
+        "label": "extract_text",
+        "kind": 2,
+        "importPath": "venv.Scripts.pdf2txt",
+        "description": "venv.Scripts.pdf2txt",
+        "peekOfCode": "def extract_text(\n    files: Iterable[str] = [],\n    outfile: str = \"-\",\n    laparams: Optional[LAParams] = None,\n    output_type: str = \"text\",\n    codec: str = \"utf-8\",\n    strip_control: bool = False,\n    maxpages: int = 0,\n    page_numbers: Optional[Container[int]] = None,\n    password: str = \"\",",
+        "detail": "venv.Scripts.pdf2txt",
+        "documentation": {}
+    },
+    {
+        "label": "create_parser",
+        "kind": 2,
+        "importPath": "venv.Scripts.pdf2txt",
+        "description": "venv.Scripts.pdf2txt",
+        "peekOfCode": "def create_parser() -> argparse.ArgumentParser:\n    parser = argparse.ArgumentParser(description=__doc__, add_help=True)\n    parser.add_argument(\n        \"files\",\n        type=str,\n        default=None,\n        nargs=\"+\",\n        help=\"One or more paths to PDF files.\",\n    )\n    parser.add_argument(",
+        "detail": "venv.Scripts.pdf2txt",
+        "documentation": {}
+    },
+    {
+        "label": "parse_args",
+        "kind": 2,
+        "importPath": "venv.Scripts.pdf2txt",
+        "description": "venv.Scripts.pdf2txt",
+        "peekOfCode": "def parse_args(args: Optional[List[str]]) -> argparse.Namespace:\n    parsed_args = create_parser().parse_args(args=args)\n    # Propagate parsed layout parameters to LAParams object\n    if parsed_args.no_laparams:\n        parsed_args.laparams = None\n    else:\n        parsed_args.laparams = LAParams(\n            line_overlap=parsed_args.line_overlap,\n            char_margin=parsed_args.char_margin,\n            line_margin=parsed_args.line_margin,",
+        "detail": "venv.Scripts.pdf2txt",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "venv.Scripts.pdf2txt",
+        "description": "venv.Scripts.pdf2txt",
+        "peekOfCode": "def main(args: Optional[List[str]] = None) -> int:\n    parsed_args = parse_args(args)\n    outfp = extract_text(**vars(parsed_args))\n    outfp.close()\n    return 0\nif __name__ == \"__main__\":\n    sys.exit(main())",
+        "detail": "venv.Scripts.pdf2txt",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_TYPES",
+        "kind": 5,
+        "importPath": "venv.Scripts.pdf2txt",
+        "description": "venv.Scripts.pdf2txt",
+        "peekOfCode": "OUTPUT_TYPES = ((\".htm\", \"html\"), (\".html\", \"html\"), (\".xml\", \"xml\"), (\".tag\", \"tag\"))\ndef float_or_disabled(x: str) -> Optional[float]:\n    if x.lower().strip() == \"disabled\":\n        return None\n    try:\n        return float(x)\n    except ValueError:\n        raise argparse.ArgumentTypeError(f\"invalid float value: {x}\")\ndef extract_text(\n    files: Iterable[str] = [],",
+        "detail": "venv.Scripts.pdf2txt",
+        "documentation": {}
+    },
+    {
+        "label": "extraer_texto_pdf",
+        "kind": 2,
+        "importPath": "mcp_proceso",
+        "description": "mcp_proceso",
+        "peekOfCode": "def extraer_texto_pdf(ruta_pdf: str) -> str:\n    texto = \"\"\n    try:\n        with open(ruta_pdf, \"rb\") as archivo:\n            lector = PyPDF2.PdfReader(archivo)\n            for pagina in lector.pages:\n                texto += pagina.extract_text() or \"\"\n    except Exception as e:\n        print(f\"Error al extraer texto de {ruta_pdf}: {e}\")\n    return texto",
+        "detail": "mcp_proceso",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_todos_los_archivos",
+        "kind": 2,
+        "importPath": "mcp_proceso",
+        "description": "mcp_proceso",
+        "peekOfCode": "def obtener_todos_los_archivos(directorio: str) -> List[str]:\n    rutas_archivos = []\n    for raiz, _, archivos in os.walk(directorio):\n        for archivo in archivos:\n            ruta_archivo = os.path.join(raiz, archivo)\n            rutas_archivos.append(ruta_archivo)\n    return rutas_archivos\ndef generar_embedding(texto: str) -> List[float]:\n    try:\n        embedding = modelo_embedding.encode(texto).tolist()",
+        "detail": "mcp_proceso",
+        "documentation": {}
+    },
+    {
+        "label": "generar_embedding",
+        "kind": 2,
+        "importPath": "mcp_proceso",
+        "description": "mcp_proceso",
+        "peekOfCode": "def generar_embedding(texto: str) -> List[float]:\n    try:\n        embedding = modelo_embedding.encode(texto).tolist()\n        return embedding\n    except Exception as e:\n        print(f\"Error al generar embedding: {e}\")\n        return None\ndef insertar_documento_en_bd(\n    conexion, nombre_archivo: str, tipo: str, contenido: str, embedding: List[float]\n):",
+        "detail": "mcp_proceso",
+        "documentation": {}
+    },
+    {
+        "label": "insertar_documento_en_bd",
+        "kind": 2,
+        "importPath": "mcp_proceso",
+        "description": "mcp_proceso",
+        "peekOfCode": "def insertar_documento_en_bd(\n    conexion, nombre_archivo: str, tipo: str, contenido: str, embedding: List[float]\n):\n    try:\n        cursor = conexion.cursor()\n        cursor.execute(\n            \"INSERT INTO documentos (nombre_archivo, tipo, contenido, embedding) VALUES (%s, %s, %s, %s)\",\n            (nombre_archivo, tipo, contenido, embedding),\n        )\n        conexion.commit()",
+        "detail": "mcp_proceso",
+        "documentation": {}
+    },
+    {
+        "label": "procesar_mcp",
+        "kind": 2,
+        "importPath": "mcp_proceso",
+        "description": "mcp_proceso",
+        "peekOfCode": "def procesar_mcp(directorio: str):\n    rutas_archivos = obtener_todos_los_archivos(directorio)\n    conexion = psycopg2.connect(\n        host=HOST_POSTGRES,\n        database=BD_POSTGRES,\n        user=USUARIO_POSTGRES,\n        password=CONTRASENA_POSTGRES,\n        port=PUERTO_POSTGRES,\n    )\n    register_vector(conexion)",
+        "detail": "mcp_proceso",
+        "documentation": {}
+    },
+    {
+        "label": "ruta_env",
+        "kind": 5,
+        "importPath": "mcp_proceso",
+        "description": "mcp_proceso",
+        "peekOfCode": "ruta_env = Path('.') / '.env'\nload_dotenv(dotenv_path=ruta_env)\n# Configuración de PostgreSQL\nHOST_POSTGRES = os.getenv(\"POSTGRES_HOST\", \"localhost\")\nBD_POSTGRES = os.getenv(\"POSTGRES_DB\", \"municipal_agent\")\nUSUARIO_POSTGRES = os.getenv(\"POSTGRES_USER\", \"admin\")\nCONTRASENA_POSTGRES = os.getenv(\"POSTGRES_PASSWORD\", \"admin123\")\nPUERTO_POSTGRES = os.getenv(\"POSTGRES_PORT\", \"5432\")\n# Directorio MCP\nDIRECTORIO_MCP = \"../pdfs_mayo_2025\"",
+        "detail": "mcp_proceso",
+        "documentation": {}
+    },
+    {
+        "label": "HOST_POSTGRES",
+        "kind": 5,
+        "importPath": "mcp_proceso",
+        "description": "mcp_proceso",
+        "peekOfCode": "HOST_POSTGRES = os.getenv(\"POSTGRES_HOST\", \"localhost\")\nBD_POSTGRES = os.getenv(\"POSTGRES_DB\", \"municipal_agent\")\nUSUARIO_POSTGRES = os.getenv(\"POSTGRES_USER\", \"admin\")\nCONTRASENA_POSTGRES = os.getenv(\"POSTGRES_PASSWORD\", \"admin123\")\nPUERTO_POSTGRES = os.getenv(\"POSTGRES_PORT\", \"5432\")\n# Directorio MCP\nDIRECTORIO_MCP = \"../pdfs_mayo_2025\"\n# Cargar modelo de embeddings\nmodelo_embedding = SentenceTransformer('all-MiniLM-L6-v2')\ndef extraer_texto_pdf(ruta_pdf: str) -> str:",
+        "detail": "mcp_proceso",
+        "documentation": {}
+    },
+    {
+        "label": "BD_POSTGRES",
+        "kind": 5,
+        "importPath": "mcp_proceso",
+        "description": "mcp_proceso",
+        "peekOfCode": "BD_POSTGRES = os.getenv(\"POSTGRES_DB\", \"municipal_agent\")\nUSUARIO_POSTGRES = os.getenv(\"POSTGRES_USER\", \"admin\")\nCONTRASENA_POSTGRES = os.getenv(\"POSTGRES_PASSWORD\", \"admin123\")\nPUERTO_POSTGRES = os.getenv(\"POSTGRES_PORT\", \"5432\")\n# Directorio MCP\nDIRECTORIO_MCP = \"../pdfs_mayo_2025\"\n# Cargar modelo de embeddings\nmodelo_embedding = SentenceTransformer('all-MiniLM-L6-v2')\ndef extraer_texto_pdf(ruta_pdf: str) -> str:\n    texto = \"\"",
+        "detail": "mcp_proceso",
+        "documentation": {}
+    },
+    {
+        "label": "USUARIO_POSTGRES",
+        "kind": 5,
+        "importPath": "mcp_proceso",
+        "description": "mcp_proceso",
+        "peekOfCode": "USUARIO_POSTGRES = os.getenv(\"POSTGRES_USER\", \"admin\")\nCONTRASENA_POSTGRES = os.getenv(\"POSTGRES_PASSWORD\", \"admin123\")\nPUERTO_POSTGRES = os.getenv(\"POSTGRES_PORT\", \"5432\")\n# Directorio MCP\nDIRECTORIO_MCP = \"../pdfs_mayo_2025\"\n# Cargar modelo de embeddings\nmodelo_embedding = SentenceTransformer('all-MiniLM-L6-v2')\ndef extraer_texto_pdf(ruta_pdf: str) -> str:\n    texto = \"\"\n    try:",
+        "detail": "mcp_proceso",
+        "documentation": {}
+    },
+    {
+        "label": "CONTRASENA_POSTGRES",
+        "kind": 5,
+        "importPath": "mcp_proceso",
+        "description": "mcp_proceso",
+        "peekOfCode": "CONTRASENA_POSTGRES = os.getenv(\"POSTGRES_PASSWORD\", \"admin123\")\nPUERTO_POSTGRES = os.getenv(\"POSTGRES_PORT\", \"5432\")\n# Directorio MCP\nDIRECTORIO_MCP = \"../pdfs_mayo_2025\"\n# Cargar modelo de embeddings\nmodelo_embedding = SentenceTransformer('all-MiniLM-L6-v2')\ndef extraer_texto_pdf(ruta_pdf: str) -> str:\n    texto = \"\"\n    try:\n        with open(ruta_pdf, \"rb\") as archivo:",
+        "detail": "mcp_proceso",
+        "documentation": {}
+    },
+    {
+        "label": "PUERTO_POSTGRES",
+        "kind": 5,
+        "importPath": "mcp_proceso",
+        "description": "mcp_proceso",
+        "peekOfCode": "PUERTO_POSTGRES = os.getenv(\"POSTGRES_PORT\", \"5432\")\n# Directorio MCP\nDIRECTORIO_MCP = \"../pdfs_mayo_2025\"\n# Cargar modelo de embeddings\nmodelo_embedding = SentenceTransformer('all-MiniLM-L6-v2')\ndef extraer_texto_pdf(ruta_pdf: str) -> str:\n    texto = \"\"\n    try:\n        with open(ruta_pdf, \"rb\") as archivo:\n            lector = PyPDF2.PdfReader(archivo)",
+        "detail": "mcp_proceso",
+        "documentation": {}
+    },
+    {
+        "label": "DIRECTORIO_MCP",
+        "kind": 5,
+        "importPath": "mcp_proceso",
+        "description": "mcp_proceso",
+        "peekOfCode": "DIRECTORIO_MCP = \"../pdfs_mayo_2025\"\n# Cargar modelo de embeddings\nmodelo_embedding = SentenceTransformer('all-MiniLM-L6-v2')\ndef extraer_texto_pdf(ruta_pdf: str) -> str:\n    texto = \"\"\n    try:\n        with open(ruta_pdf, \"rb\") as archivo:\n            lector = PyPDF2.PdfReader(archivo)\n            for pagina in lector.pages:\n                texto += pagina.extract_text() or \"\"",
+        "detail": "mcp_proceso",
+        "documentation": {}
+    },
+    {
+        "label": "modelo_embedding",
+        "kind": 5,
+        "importPath": "mcp_proceso",
+        "description": "mcp_proceso",
+        "peekOfCode": "modelo_embedding = SentenceTransformer('all-MiniLM-L6-v2')\ndef extraer_texto_pdf(ruta_pdf: str) -> str:\n    texto = \"\"\n    try:\n        with open(ruta_pdf, \"rb\") as archivo:\n            lector = PyPDF2.PdfReader(archivo)\n            for pagina in lector.pages:\n                texto += pagina.extract_text() or \"\"\n    except Exception as e:\n        print(f\"Error al extraer texto de {ruta_pdf}: {e}\")",
+        "detail": "mcp_proceso",
+        "documentation": {}
+    }
+]
