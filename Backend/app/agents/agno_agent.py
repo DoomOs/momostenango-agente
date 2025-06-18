@@ -41,13 +41,11 @@ class VectorSearchTool:
         :return: Lista de diccionarios con documentos (id, nombre_archivo, contenido, distancia).
         """
         sql = """
-            SELECT id, nombre_archivo, contenido,
-                embedding <=> $1::vector AS distance
-            FROM documentos
-            ORDER BY embedding <=> $1::vector
-            LIMIT $2;
+            SELECT *
+                FROM documentos
+            ORDER BY embedding <-> $1::vector
+                LIMIT $2;
             """
-
         async with self.pool.acquire() as conn:
             rows = await conn.fetch(sql, query_embedding, top_k)
             
