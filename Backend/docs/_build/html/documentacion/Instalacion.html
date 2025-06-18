@@ -1,0 +1,193 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instalacion: &mdash; documentación de Agente_genesis - </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=e2bb6099"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Main.py:" href="main.html" />
+    <link rel="prev" title="Descripción General del Proyecto" href="Introduccion.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Agente_genesis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduccion.html">Descripción General del Proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduccion.html#arquitectura-del-sistema">Arquitectura del Sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduccion.html#funcionalidades-principales">Funcionalidades Principales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduccion.html#tecnologias-utilizadas">Tecnologías Utilizadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduccion.html#el-mcp">El MCP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduccion.html#script-para-descarga-de-pdfs-desde-pagina-web">Script para Descarga de PDFs desde Página Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduccion.html#objetivo-general-del-proyecto">Objetivo General del Proyecto</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instalacion:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#docker">Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Main.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Config.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">Helpers.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connection.html">Connection.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crud.html">Crud.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="routes.html">Routes.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="agno_agent.html">Agno_agent.py:</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Agente_genesis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Instalacion:</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/documentacion/Instalacion.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="instalacion">
+<h1>Instalacion:<a class="headerlink" href="#instalacion" title="Link to this heading"></a></h1>
+<p>Para instalar este software se debe de tener python 3.x instalado ademas de ello debemos de instalar y activar un entorno virtual (venv) en Python, siguiendo estos pasos:</p>
+<ul class="simple">
+<li><p><strong>1. Instalar</strong>  <code class="docutils literal notranslate"><span class="pre">venv</span></code>
+Si estás utilizando Python 3.3 o superior, <code class="docutils literal notranslate"><span class="pre">venv</span></code> ya está incluido, pero si hay problemas, puedes instalarlo con:</p></li>
+</ul>
+<div class="copybutton highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>2. Crear un entorno virtual</strong>
+Navega a la carpeta donde deseas crear el entorno y ejecuta:</p></li>
+</ul>
+<div class="copybutton highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">nombre_del_entorno</span>
+</pre></div>
+</div>
+<p>Por ejemplo, para un entorno llamado venv:</p>
+<div class="copybutton highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">venv</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>3. Activar el entorno virtual</strong>
+La activación depende de tu sistema operativo:
+Windows (cmd o PowerShell):</p></li>
+</ul>
+<div class="copybutton highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">venv</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>4. Verificar activación</strong>
+Si el entorno se activó correctamente, verás el nombre del entorno entre paréntesis en la terminal, por ejemplo: <code class="docutils literal notranslate"><span class="pre">(venv)</span></code></p></li>
+<li><p><strong>5. Desactivar el entorno virtual</strong>
+Cuando termines, puedes salir del entorno con:</p></li>
+</ul>
+<div class="copybutton highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deactivate</span>
+</pre></div>
+</div>
+<p>Con el entorno virtual activo, debemos de ejecutar la sigueinte intalacion de requerimientos:</p>
+<div class="copybutton highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span><span class="o">==</span><span class="mf">2.3.0</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">httpx</span><span class="o">==</span><span class="mf">0.28.1</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">openai</span><span class="o">==</span><span class="mf">1.86.0</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">PyPDF2</span><span class="o">==</span><span class="mf">3.0.1</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">blacksheep</span><span class="o">==</span><span class="mf">2.3.1</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">asyncpg</span><span class="o">==</span><span class="mf">0.30.0</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">pgvector</span><span class="o">==</span><span class="mf">0.4.1</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">dotenv</span><span class="o">==</span><span class="mf">1.1.0</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">uvicorn</span><span class="o">==</span><span class="mf">0.34.3</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span><span class="o">==</span><span class="mf">2.32.4</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">Sphinx</span><span class="o">==</span><span class="mf">8.2.3</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">rtd</span><span class="o">-</span><span class="n">theme</span><span class="o">==</span><span class="mf">3.0.2</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">applehelp</span><span class="o">==</span><span class="mf">2.0.0</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">devhelp</span><span class="o">==</span><span class="mf">2.0.0</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">htmlhelp</span><span class="o">==</span><span class="mf">2.1.0</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">jquery</span><span class="o">==</span><span class="mf">4.1</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">jsmath</span><span class="o">==</span><span class="mf">1.0.1</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">qthelp</span><span class="o">==</span><span class="mf">2.0.0</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">serializinghtml</span><span class="o">==</span><span class="mf">2.0.0</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">beautifulsoup4</span><span class="o">==</span><span class="mf">4.12.2</span>
+</pre></div>
+</div>
+<section id="docker">
+<h2>Docker<a class="headerlink" href="#docker" title="Link to this heading"></a></h2>
+<p>Asi mismo, debemos de tener instalado Docker, si tenemos visual Studio Code, es recomendable que instales la extension de Docker para facilitar su uso, ya que este permite ejecutar directamente el contenedor de docker, si no puedes usar este comando:</p>
+<div class="copybutton highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">compose</span> <span class="o">-</span><span class="n">f</span> <span class="s1">&#39;docker-compose.yml&#39;</span> <span class="n">up</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">build</span> 
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="Introduccion.html" class="btn btn-neutral float-left" title="Descripción General del Proyecto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="main.html" class="btn btn-neutral float-right" title="Main.py:" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2025, Bryan Sosa.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

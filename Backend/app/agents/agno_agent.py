@@ -1,8 +1,8 @@
 """
 Configuración del agente Agno con integración a OpenRouter LLM, búsqueda vectorial en PostgreSQL
-y capacidad de búsqueda en internet con filtro geográfico.
+y capacidad de búsqueda en internet con filtro geográfico(No funcino la busqueda por internet, el metodo para usar internet en un modelo de openrouter, no es compatibles con todos lo modelos y debe de usarse un tools).
 
-Incluye gestión inteligente de contexto, fragmentación, resumen, y streaming real.
+Incluye gestión inteligente de contexto, fragmentación, resumen, y streaming.
 """
 
 import os

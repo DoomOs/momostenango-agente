@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Routes.py: &mdash; documentación de Agente_genesis - </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=e2bb6099"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Agno_agent.py:" href="agno_agent.html" />
+    <link rel="prev" title="Crud.py:" href="crud.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Agente_genesis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="main.html">Main.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Config.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">Helpers.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connection.html">Connection.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crud.html">Crud.py:</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Routes.py:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#app.api.routes.chat"><code class="docutils literal notranslate"><span class="pre">chat()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#app.api.routes.init_agent"><code class="docutils literal notranslate"><span class="pre">init_agent()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#app.api.routes.limpiar_conversacion"><code class="docutils literal notranslate"><span class="pre">limpiar_conversacion()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#app.api.routes.login"><code class="docutils literal notranslate"><span class="pre">login()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#app.api.routes.parse_confianza"><code class="docutils literal notranslate"><span class="pre">parse_confianza()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#app.api.routes.upload"><code class="docutils literal notranslate"><span class="pre">upload()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="agno_agent.html">Agno_agent.py:</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Agente_genesis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Routes.py:</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/documentacion/routes.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-app.api.routes">
+<span id="routes-py"></span><h1>Routes.py:<a class="headerlink" href="#module-app.api.routes" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.routes.chat">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.routes.</span></span><span class="sig-name descname"><span class="pre">chat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Response</span></span></span><a class="headerlink" href="#app.api.routes.chat" title="Link to this definition"></a></dt>
+<dd><p>Endpoint POST /chat para interactuar con el agente municipal.</p>
+<p>Recibe JSON con pregunta, ciudadano_id y token_sesion.
+Valida sesión, filtra preguntas, genera embedding, y responde con streaming real.
+Maneja derivación a humano si la confianza es baja.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – Objeto Request con JSON.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response con streaming de texto.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.routes.init_agent">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.routes.</span></span><span class="sig-name descname"><span class="pre">init_agent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.api.routes.init_agent" title="Link to this definition"></a></dt>
+<dd><p>Inicializa la instancia global del agente AgnoMunicipalAgent.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.routes.limpiar_conversacion">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.routes.</span></span><span class="sig-name descname"><span class="pre">limpiar_conversacion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Response</span></span></span><a class="headerlink" href="#app.api.routes.limpiar_conversacion" title="Link to this definition"></a></dt>
+<dd><p>Endpoint POST /limpiar para limpiar la conversación y permitir continuar tras derivación a humano.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – Objeto Request con JSON.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON con mensaje de confirmación.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.routes.login">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.routes.</span></span><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Response</span></span></span><a class="headerlink" href="#app.api.routes.login" title="Link to this definition"></a></dt>
+<dd><p>Endpoint POST /login para registrar o identificar un ciudadano y crear una sesión nueva.</p>
+<p>JSON esperado:
+{</p>
+<blockquote>
+<div><p>«nombre»: «Nombre completo»,
+«email»: «<a class="reference external" href="mailto:correo&#37;&#52;&#48;ejemplo&#46;com">correo<span>&#64;</span>ejemplo<span>&#46;</span>com</a>»,
+«telefono»: «123456789» (opcional)</p>
+</div></blockquote>
+<p>}</p>
+<p>Respuesta JSON:
+{</p>
+<blockquote>
+<div><p>«ciudadano_id»: int,
+«token_sesion»: str</p>
+</div></blockquote>
+<p>}</p>
+<p>Si el correo ya existe, se reutiliza el ciudadano y se crea una nueva sesión.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.routes.parse_confianza">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.routes.</span></span><span class="sig-name descname"><span class="pre">parse_confianza</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">respuesta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#app.api.routes.parse_confianza" title="Link to this definition"></a></dt>
+<dd><p>Extrae un valor de confianza numérico de la respuesta del agente.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>respuesta</strong> – Texto de la respuesta.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de confianza entre 0 y 1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.api.routes.upload">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.api.routes.</span></span><span class="sig-name descname"><span class="pre">upload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.api.routes.upload" title="Link to this definition"></a></dt>
+<dd><p>Actualmente no funciona
+POST /upload — Subir un único PDF y extraer su texto usando FormPart.content_type y .content.</p>
+<ol class="arabic simple">
+<li><p>Comprueba que el servicio está listo.</p></li>
+<li><p>await request.form(), imprime keys para debug.</p></li>
+<li><p>Toma form[“archivo”] (lista de FormPart) y coge el primero.</p></li>
+<li><p>Lee content_type desde part.content_type y decodifica si es bytes.</p></li>
+<li><p>Valida “application/pdf”; si falla → 400.</p></li>
+<li><p>Lee contenido_bytes = part.content.</p></li>
+<li><p>Extrae texto con PyPDF2 y guarda en pdf_text_temp.</p></li>
+<li><p>Devuelve JSON de éxito.</p></li>
+</ol>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="crud.html" class="btn btn-neutral float-left" title="Crud.py:" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="agno_agent.html" class="btn btn-neutral float-right" title="Agno_agent.py:" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2025, Bryan Sosa.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

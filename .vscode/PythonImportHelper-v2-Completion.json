@@ -525,21 +525,21 @@
         "documentation": {}
     },
     {
-        "label": "os.path",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os.path",
-        "description": "os.path",
-        "detail": "os.path",
-        "documentation": {}
-    },
-    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "os.path",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os.path",
+        "description": "os.path",
+        "detail": "os.path",
         "documentation": {}
     },
     {
@@ -981,7 +981,7 @@
         "kind": 5,
         "importPath": "Backend.docs.conf",
         "description": "Backend.docs.conf",
-        "peekOfCode": "author = 'Bryan Sosa'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = []\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'alabaster'",
+        "peekOfCode": "author = 'Bryan Sosa'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = []\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\n#html_theme = 'alabaster'",
         "detail": "Backend.docs.conf",
         "documentation": {}
     },
@@ -990,7 +990,7 @@
         "kind": 5,
         "importPath": "Backend.docs.conf",
         "description": "Backend.docs.conf",
-        "peekOfCode": "extensions = []\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'alabaster'\nhtml_static_path = ['_static']",
+        "peekOfCode": "extensions = []\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\n#html_theme = 'alabaster'\nhtml_theme = 'sphinx_rtd_theme'\nsys.path.insert(0, os.path.abspath('..'))\nextensions = [",
         "detail": "Backend.docs.conf",
         "documentation": {}
     },
@@ -999,7 +999,7 @@
         "kind": 5,
         "importPath": "Backend.docs.conf",
         "description": "Backend.docs.conf",
-        "peekOfCode": "templates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'alabaster'\nhtml_static_path = ['_static']",
+        "peekOfCode": "templates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\n#html_theme = 'alabaster'\nhtml_theme = 'sphinx_rtd_theme'\nsys.path.insert(0, os.path.abspath('..'))\nextensions = [\n    'myst_parser',",
         "detail": "Backend.docs.conf",
         "documentation": {}
     },
@@ -1008,7 +1008,7 @@
         "kind": 5,
         "importPath": "Backend.docs.conf",
         "description": "Backend.docs.conf",
-        "peekOfCode": "exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'alabaster'\nhtml_static_path = ['_static']",
+        "peekOfCode": "exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\n#html_theme = 'alabaster'\nhtml_theme = 'sphinx_rtd_theme'\nsys.path.insert(0, os.path.abspath('..'))\nextensions = [\n    'myst_parser',\n    'sphinx.ext.autodoc',",
         "detail": "Backend.docs.conf",
         "documentation": {}
     },
@@ -1017,7 +1017,16 @@
         "kind": 5,
         "importPath": "Backend.docs.conf",
         "description": "Backend.docs.conf",
-        "peekOfCode": "language = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'alabaster'\nhtml_static_path = ['_static']",
+        "peekOfCode": "language = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\n#html_theme = 'alabaster'\nhtml_theme = 'sphinx_rtd_theme'\nsys.path.insert(0, os.path.abspath('..'))\nextensions = [\n    'myst_parser',\n    'sphinx.ext.autodoc',\n    'sphinx.ext.napoleon',",
+        "detail": "Backend.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_theme",
+        "kind": 5,
+        "importPath": "Backend.docs.conf",
+        "description": "Backend.docs.conf",
+        "peekOfCode": "#html_theme = 'alabaster'\nhtml_theme = 'sphinx_rtd_theme'\nsys.path.insert(0, os.path.abspath('..'))\nextensions = [\n    'myst_parser',\n    'sphinx.ext.autodoc',\n    'sphinx.ext.napoleon',\n    'sphinx_rtd_theme',\n]\nsource_suffix = {",
         "detail": "Backend.docs.conf",
         "documentation": {}
     },
@@ -1026,7 +1035,25 @@
         "kind": 5,
         "importPath": "Backend.docs.conf",
         "description": "Backend.docs.conf",
-        "peekOfCode": "html_theme = 'alabaster'\nhtml_static_path = ['_static']",
+        "peekOfCode": "html_theme = 'sphinx_rtd_theme'\nsys.path.insert(0, os.path.abspath('..'))\nextensions = [\n    'myst_parser',\n    'sphinx.ext.autodoc',\n    'sphinx.ext.napoleon',\n    'sphinx_rtd_theme',\n]\nsource_suffix = {\n    '.rst': 'restructuredtext',",
+        "detail": "Backend.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "extensions",
+        "kind": 5,
+        "importPath": "Backend.docs.conf",
+        "description": "Backend.docs.conf",
+        "peekOfCode": "extensions = [\n    'myst_parser',\n    'sphinx.ext.autodoc',\n    'sphinx.ext.napoleon',\n    'sphinx_rtd_theme',\n]\nsource_suffix = {\n    '.rst': 'restructuredtext',\n    '.md': 'markdown',\n}",
+        "detail": "Backend.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "source_suffix",
+        "kind": 5,
+        "importPath": "Backend.docs.conf",
+        "description": "Backend.docs.conf",
+        "peekOfCode": "source_suffix = {\n    '.rst': 'restructuredtext',\n    '.md': 'markdown',\n}\nhtml_static_path = ['_static']",
         "detail": "Backend.docs.conf",
         "documentation": {}
     },
