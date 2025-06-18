@@ -96,22 +96,7 @@ Con las dependencias instaladas, con el entorno virtual activo y el archivo .env
 python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-Dentro de la carpeta de Backend, deberemos de crear un archivo .env, y en el debemos de crear las sigueintes variables de entorno
 
-```{code-block}
-:class: copybutton
-
-OPENROUTER_API_KEY=tu-api-key
-
-
-POSTGRES_HOST=localhost
-POSTGRES_DB=municipal_agent
-POSTGRES_USER=admin
-POSTGRES_PASSWORD=admin123
-POSTGRES_PORT=5432
-
-
-```
 
 ### Docker
 Asi mismo, debemos de tener instalado Docker, si tenemos visual Studio Code, es recomendable que instales la extension de Docker para facilitar su uso, ya que este permite ejecutar directamente el contenedor de docker, si no puedes usar este comando en una terminal donde este ubicado tu archivo `docker-compose.yml`: 
