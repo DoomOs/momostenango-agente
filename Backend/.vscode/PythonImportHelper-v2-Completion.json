@@ -217,6 +217,14 @@
         "documentation": {}
     },
     {
+        "label": "text",
+        "importPath": "blacksheep.server.responses",
+        "description": "blacksheep.server.responses",
+        "isExtraImport": true,
+        "detail": "blacksheep.server.responses",
+        "documentation": {}
+    },
+    {
         "label": "Response",
         "importPath": "blacksheep.server.responses",
         "description": "blacksheep.server.responses",
@@ -230,6 +238,15 @@
         "description": "app.agents.agno_agent",
         "isExtraImport": true,
         "detail": "app.agents.agno_agent",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
         "documentation": {}
     },
     {
@@ -508,12 +525,12 @@
         "documentation": {}
     },
     {
-        "label": "logging",
+        "label": "sys",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "logging",
-        "description": "logging",
-        "detail": "logging",
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
         "documentation": {}
     },
     {
@@ -523,15 +540,6 @@
         "importPath": "os.path",
         "description": "os.path",
         "detail": "os.path",
-        "documentation": {}
-    },
-    {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
         "documentation": {}
     },
     {
@@ -782,11 +790,29 @@
         "documentation": {}
     },
     {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "app.api.routes",
+        "description": "app.api.routes",
+        "peekOfCode": "logger = logging.getLogger(\"upload\")\n# Variable global para la instancia del agente, se inicializa en startup\nagent_instance = None\n# Variable temporal para almacenar el texto del PDF\npdf_text_temp = \"\"\n# Estado simple en memoria para simular bloqueo por derivación a humano\nconversaciones_derivadas = set()\nasync def init_agent():\n    \"\"\"\n    Inicializa la instancia global del agente AgnoMunicipalAgent.",
+        "detail": "app.api.routes",
+        "documentation": {}
+    },
+    {
         "label": "agent_instance",
         "kind": 5,
         "importPath": "app.api.routes",
         "description": "app.api.routes",
-        "peekOfCode": "agent_instance = None\n# Estado simple en memoria para simular bloqueo por derivación a humano\nconversaciones_derivadas = set()\nasync def init_agent():\n    \"\"\"\n    Inicializa la instancia global del agente AgnoMunicipalAgent.\n    \"\"\"\n    global agent_instance\n    from app.db.connection import db\n    OPENROUTER_API_KEY = os.getenv(\"OPENROUTER_API_KEY\")",
+        "peekOfCode": "agent_instance = None\n# Variable temporal para almacenar el texto del PDF\npdf_text_temp = \"\"\n# Estado simple en memoria para simular bloqueo por derivación a humano\nconversaciones_derivadas = set()\nasync def init_agent():\n    \"\"\"\n    Inicializa la instancia global del agente AgnoMunicipalAgent.\n    \"\"\"\n    global agent_instance",
+        "detail": "app.api.routes",
+        "documentation": {}
+    },
+    {
+        "label": "pdf_text_temp",
+        "kind": 5,
+        "importPath": "app.api.routes",
+        "description": "app.api.routes",
+        "peekOfCode": "pdf_text_temp = \"\"\n# Estado simple en memoria para simular bloqueo por derivación a humano\nconversaciones_derivadas = set()\nasync def init_agent():\n    \"\"\"\n    Inicializa la instancia global del agente AgnoMunicipalAgent.\n    \"\"\"\n    global agent_instance\n    from app.db.connection import db\n    OPENROUTER_API_KEY = os.getenv(\"OPENROUTER_API_KEY\")",
         "detail": "app.api.routes",
         "documentation": {}
     },
@@ -905,6 +931,114 @@
         "description": "app.main",
         "peekOfCode": "app = Application()\nasync def cors_middleware(request, handler):\n    \"\"\"\n    Middleware para manejar CORS (Cross-Origin Resource Sharing).\n    Intercepta todas las solicitudes y añade cabeceras CORS necesarias para permitir\n    solicitudes desde cualquier origen. Responde directamente a solicitudes OPTIONS\n    con los headers adecuados para evitar bloqueos en navegadores.\n    Además, captura excepciones para asegurar que siempre se envíen los headers CORS.\n    \"\"\"\n    if request.method == \"OPTIONS\":",
         "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "project",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "project = 'Agente_genesis'\ncopyright = '2025, Bryan Sosa'\nauthor = 'Bryan Sosa'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = []\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "copyright",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "copyright = '2025, Bryan Sosa'\nauthor = 'Bryan Sosa'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = []\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "author",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "author = 'Bryan Sosa'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = []\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\n#html_theme = 'alabaster'",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "extensions",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "extensions = []\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\n#html_theme = 'alabaster'\nhtml_theme = 'sphinx_rtd_theme'\nsys.path.insert(0, os.path.abspath('..'))\nextensions = [",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "templates_path",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "templates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\n#html_theme = 'alabaster'\nhtml_theme = 'sphinx_rtd_theme'\nsys.path.insert(0, os.path.abspath('..'))\nextensions = [\n    'myst_parser',",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "exclude_patterns",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\nlanguage = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\n#html_theme = 'alabaster'\nhtml_theme = 'sphinx_rtd_theme'\nsys.path.insert(0, os.path.abspath('..'))\nextensions = [\n    'myst_parser',\n    'sphinx.ext.autodoc',",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "language",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "language = 'es'\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\n#html_theme = 'alabaster'\nhtml_theme = 'sphinx_rtd_theme'\nsys.path.insert(0, os.path.abspath('..'))\nextensions = [\n    'myst_parser',\n    'sphinx.ext.autodoc',\n    'sphinx.ext.napoleon',",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_theme",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "#html_theme = 'alabaster'\nhtml_theme = 'sphinx_rtd_theme'\nsys.path.insert(0, os.path.abspath('..'))\nextensions = [\n    'myst_parser',\n    'sphinx.ext.autodoc',\n    'sphinx.ext.napoleon',\n    'sphinx_rtd_theme',\n]\nsource_suffix = {",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_theme",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "html_theme = 'sphinx_rtd_theme'\nsys.path.insert(0, os.path.abspath('..'))\nextensions = [\n    'myst_parser',\n    'sphinx.ext.autodoc',\n    'sphinx.ext.napoleon',\n    'sphinx_rtd_theme',\n]\nsource_suffix = {\n    '.rst': 'restructuredtext',",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "extensions",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "extensions = [\n    'myst_parser',\n    'sphinx.ext.autodoc',\n    'sphinx.ext.napoleon',\n    'sphinx_rtd_theme',\n]\nsource_suffix = {\n    '.rst': 'restructuredtext',\n    '.md': 'markdown',\n}",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "source_suffix",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "source_suffix = {\n    '.rst': 'restructuredtext',\n    '.md': 'markdown',\n}\nhtml_static_path = ['_static']",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_static_path",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "html_static_path = ['_static']",
+        "detail": "docs.conf",
         "documentation": {}
     },
     {

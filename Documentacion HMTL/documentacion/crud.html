@@ -1,0 +1,220 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crud.py: &mdash; documentación de Agente_genesis - </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=e2bb6099"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="prev" title="Connection.py:" href="connection.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Agente_genesis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="main.html">Main.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Config.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">Helpers.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connection.html">Connection.py:</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Crud.py:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#app.db.crud.crear_ciudadano"><code class="docutils literal notranslate"><span class="pre">crear_ciudadano()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#app.db.crud.crear_sesion"><code class="docutils literal notranslate"><span class="pre">crear_sesion()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#app.db.crud.guardar_consulta_respuesta"><code class="docutils literal notranslate"><span class="pre">guardar_consulta_respuesta()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#app.db.crud.obtener_ciudadano_por_email"><code class="docutils literal notranslate"><span class="pre">obtener_ciudadano_por_email()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#app.db.crud.obtener_faqs"><code class="docutils literal notranslate"><span class="pre">obtener_faqs()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#app.db.crud.obtener_sesion_por_token"><code class="docutils literal notranslate"><span class="pre">obtener_sesion_por_token()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Agente_genesis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Crud.py:</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/documentacion/crud.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-app.db.crud">
+<span id="crud-py"></span><h1>Crud.py:<a class="headerlink" href="#module-app.db.crud" title="Link to this heading"></a></h1>
+<p>Funciones CRUD para las tablas principales:
+- ciudadanos
+- sesiones
+- consultas_respuestas
+- documentos
+- faqs</p>
+<p>Incluye saneamiento básico y validación de datos.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="app.db.crud.crear_ciudadano">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.db.crud.</span></span><span class="sig-name descname"><span class="pre">crear_ciudadano</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nombre</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telefono</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#app.db.crud.crear_ciudadano" title="Link to this definition"></a></dt>
+<dd><p>Crea un nuevo ciudadano.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nombre</strong> – Nombre completo.</p></li>
+<li><p><strong>email</strong> – Correo electrónico único.</p></li>
+<li><p><strong>telefono</strong> – Teléfono opcional.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>ID del ciudadano creado.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.db.crud.crear_sesion">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.db.crud.</span></span><span class="sig-name descname"><span class="pre">crear_sesion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ciudadano_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token_sesion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#app.db.crud.crear_sesion" title="Link to this definition"></a></dt>
+<dd><p>Crea una nueva sesión para un ciudadano.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ciudadano_id</strong> – ID del ciudadano.</p></li>
+<li><p><strong>token_sesion</strong> – Token único de sesión.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>ID de la sesión creada.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.db.crud.guardar_consulta_respuesta">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.db.crud.</span></span><span class="sig-name descname"><span class="pre">guardar_consulta_respuesta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sesion_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pregunta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">respuesta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confianza</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.db.crud.guardar_consulta_respuesta" title="Link to this definition"></a></dt>
+<dd><p>Guarda una consulta y su respuesta en la base de datos.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sesion_id</strong> – ID de la sesión.</p></li>
+<li><p><strong>pregunta</strong> – Texto de la pregunta.</p></li>
+<li><p><strong>respuesta</strong> – Texto de la respuesta.</p></li>
+<li><p><strong>confianza</strong> – Nivel de confianza del agente (0 a 1).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.db.crud.obtener_ciudadano_por_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.db.crud.</span></span><span class="sig-name descname"><span class="pre">obtener_ciudadano_por_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#app.db.crud.obtener_ciudadano_por_email" title="Link to this definition"></a></dt>
+<dd><p>Busca un ciudadano por su correo electrónico.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>email</strong> – Correo electrónico.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Diccionario con datos del ciudadano o None si no existe.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.db.crud.obtener_faqs">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.db.crud.</span></span><span class="sig-name descname"><span class="pre">obtener_faqs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#app.db.crud.obtener_faqs" title="Link to this definition"></a></dt>
+<dd><p>Obtiene una lista de preguntas frecuentes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>limit</strong> – Número máximo de FAQs a obtener.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Lista de diccionarios con preguntas y respuestas.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.db.crud.obtener_sesion_por_token">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.db.crud.</span></span><span class="sig-name descname"><span class="pre">obtener_sesion_por_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token_sesion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#app.db.crud.obtener_sesion_por_token" title="Link to this definition"></a></dt>
+<dd><p>Obtiene la sesión por token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>token_sesion</strong> – Token de sesión.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Diccionario con datos de la sesión o None si no existe.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="connection.html" class="btn btn-neutral float-left" title="Connection.py:" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2025, Bryan Sosa.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

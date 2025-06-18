@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descripción General del Proyecto &mdash; documentación de Agente_genesis - </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=e2bb6099"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Instalacion:" href="Instalacion.html" />
+    <link rel="prev" title="Agente_genesis documentation" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Agente_genesis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Descripción General del Proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#arquitectura-del-sistema">Arquitectura del Sistema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#api-backend-blacksheep">1. API Backend (BlackSheep)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modelo-de-lenguaje-llm-openrouter">2. Modelo de Lenguaje (LLM) - OpenRouter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#base-de-datos-postgresql-pgvector-docker">3. Base de Datos - PostgreSQL + pgvector (Docker)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#busqueda-en-internet-no-funcional">4. Búsqueda en Internet (No funcional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gestion-de-sesiones">5. Gestión de Sesiones</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#funcionalidades-principales">Funcionalidades Principales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#tecnologias-utilizadas">Tecnologías Utilizadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#el-mcp">El MCP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#componentes-del-mcp">Componentes del MCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rol-del-mcp-en-el-agente">Rol del MCP en el Agente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#implementacion-tecnica">Implementación Técnica</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#script-para-descarga-de-pdfs-desde-pagina-web">Script para Descarga de PDFs desde Página Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#proposito">Propósito</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcionamiento">Funcionamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#estructura-del-script">Estructura del Script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#objetivo-general-del-proyecto">Objetivo General del Proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Instalacion.html">Instalacion:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Main.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Config.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">Helpers.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connection.html">Connection.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crud.html">Crud.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="routes.html">Routes.py:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="agno_agent.html">Agno_agent.py:</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Agente_genesis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Descripción General del Proyecto</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/documentacion/Introduccion.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="descripcion-general-del-proyecto">
+<h1>Descripción General del Proyecto<a class="headerlink" href="#descripcion-general-del-proyecto" title="Link to this heading"></a></h1>
+<p><strong>Agno Municipal Agent</strong> es una aplicación backend desarrollada para mejorar la interacción entre los ciudadanos y el gobierno local de Momostenango, Guatemala. Implementada con el framework asincrónico BlackSheep (Python), esta solución ofrece una interfaz conversacional capaz de proporcionar información municipal sobre trámites, servicios y normativas de forma eficiente.</p>
+<hr class="docutils" />
+</section>
+<section id="arquitectura-del-sistema">
+<h1>Arquitectura del Sistema<a class="headerlink" href="#arquitectura-del-sistema" title="Link to this heading"></a></h1>
+<section id="api-backend-blacksheep">
+<h2>1. API Backend (BlackSheep)<a class="headerlink" href="#api-backend-blacksheep" title="Link to this heading"></a></h2>
+<p>El núcleo del sistema es una API desarrollada con BlackSheep. Esta API gestiona las solicitudes entrantes, conecta con el modelo de lenguaje y la base de datos, y entrega respuestas en tiempo real.</p>
+</section>
+<section id="modelo-de-lenguaje-llm-openrouter">
+<h2>2. Modelo de Lenguaje (LLM) - OpenRouter<a class="headerlink" href="#modelo-de-lenguaje-llm-openrouter" title="Link to this heading"></a></h2>
+<p>El sistema utiliza un modelo de lenguaje a través de la plataforma OpenRouter. Este modelo responde a las consultas de los usuarios bajo un prompt inicial que lo define como asistente municipal especializado en temas de Momostenango.</p>
+</section>
+<section id="base-de-datos-postgresql-pgvector-docker">
+<h2>3. Base de Datos - PostgreSQL + pgvector (Docker)<a class="headerlink" href="#base-de-datos-postgresql-pgvector-docker" title="Link to this heading"></a></h2>
+<p>Toda la información relevante (documentos, preguntas frecuentes, etc.) se almacena en una base de datos PostgreSQL. Se emplea la extensión <code class="docutils literal notranslate"><span class="pre">pgvector</span></code> para realizar búsquedas semánticas eficientes basadas en embeddings.</p>
+</section>
+<section id="busqueda-en-internet-no-funcional">
+<h2>4. Búsqueda en Internet (No funcional)<a class="headerlink" href="#busqueda-en-internet-no-funcional" title="Link to this heading"></a></h2>
+<p>El agente puede complementar sus respuestas mediante búsquedas web restringidas geográficamente a Guatemala, en caso de que la base de datos no contenga la información requerida.</p>
+</section>
+<section id="gestion-de-sesiones">
+<h2>5. Gestión de Sesiones<a class="headerlink" href="#gestion-de-sesiones" title="Link to this heading"></a></h2>
+<p>Cada conversación se gestiona mediante sesiones lo que tener una trazabilidad de que ciudadanos dan mas uso al agente.</p>
+<hr class="docutils" />
+</section>
+</section>
+<section id="funcionalidades-principales">
+<h1>Funcionalidades Principales<a class="headerlink" href="#funcionalidades-principales" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><strong>Autenticación de Usuarios:</strong> Registro e inicio de sesión para acceso personalizado.</p></li>
+<li><p><strong>Interfaz Conversacional:</strong> Chat con el agente municipal.</p></li>
+<li><p><strong>Búsqueda Vectorial:</strong> Recuperación de documentos relevantes mediante <code class="docutils literal notranslate"><span class="pre">pgvector</span></code>.</p></li>
+<li><p><strong>Conversacion con el Agente:</strong> Este agente estará disponible para responder preguntas sobre temas exclusivamente del ámbito municipal.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="tecnologias-utilizadas">
+<h1>Tecnologías Utilizadas<a class="headerlink" href="#tecnologias-utilizadas" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><strong>Lenguaje:</strong> Python</p></li>
+<li><p><strong>Framework:</strong> BlackSheep (ASGI)</p></li>
+<li><p><strong>Modelo de Lenguaje:</strong> OpenRouter (con acceso a modelos como OpenAI o similares)</p></li>
+<li><p><strong>Base de Datos:</strong> PostgreSQL</p></li>
+<li><p><strong>Extensión Vectorial:</strong> pgvector</p></li>
+<li><p><strong>Cliente HTTP:</strong> httpx</p></li>
+<li><p><strong>Servidor:</strong> uvicorn</p></li>
+<li><p><strong>Procesamiento de PDF:</strong> pdfjs-dist</p></li>
+<li><p><strong>Scraping:</strong> Beutifulsoap</p></li>
+<li><p><strong>Documentacion:</strong> Sphinx</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="el-mcp">
+<h1>El MCP<a class="headerlink" href="#el-mcp" title="Link to this heading"></a></h1>
+<p>El <strong>MCP</strong> representa la fuente centralizada de información oficial de la municipalidad, proporcionando el contexto necesario para que el agente responda de forma precisa, (si la pregunta realizada no esta en el contexto, puede errar en su respuesta)</p>
+<section id="componentes-del-mcp">
+<h2>Componentes del MCP<a class="headerlink" href="#componentes-del-mcp" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Documentos oficiales:</strong> Reglamentos, normativas, procedimientos y servicios almacenados en la base de datos.</p></li>
+<li><p><strong>FAQs:</strong> Preguntas frecuentes para resolver inquietudes comunes de forma inmediata.</p></li>
+</ul>
+</section>
+<section id="rol-del-mcp-en-el-agente">
+<h2>Rol del MCP en el Agente<a class="headerlink" href="#rol-del-mcp-en-el-agente" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Recuperación de Información Precisa:</strong> Mediante búsqueda vectorial semántica.</p></li>
+<li><p><strong>Limitación del Alcance del Modelo:</strong> El agente responde exclusivamente a temas municipales.</p></li>
+<li><p><strong>Mejora de Respuestas:</strong> Combinación de documentos, FAQs y contexto adicional.</p></li>
+</ol>
+</section>
+<section id="implementacion-tecnica">
+<h2>Implementación Técnica<a class="headerlink" href="#implementacion-tecnica" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Búsqueda Semántica:</strong> Uso de embeddings sobre documentos municipales almacenados en PostgreSQL.</p></li>
+<li><p><strong>Integración con el Prompt:</strong> La información extraída se incorpora al prompt del modelo para mejorar la precisión de las respuestas.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<section id="script-para-descarga-de-pdfs-desde-pagina-web">
+<h1>Script para Descarga de PDFs desde Página Web<a class="headerlink" href="#script-para-descarga-de-pdfs-desde-pagina-web" title="Link to this heading"></a></h1>
+<section id="proposito">
+<h2>Propósito<a class="headerlink" href="#proposito" title="Link to this heading"></a></h2>
+<p>Este script automatiza la descarga de todos los archivos PDF enlazados en una página web específica. Se ha diseñado para obtener los documentos públicos disponibles en:</p>
+<p><a class="reference external" href="https://municipalidaddemomostenango.com/mayo-2025/">https://municipalidaddemomostenango.com/mayo-2025/</a></p>
+</section>
+<section id="funcionamiento">
+<h2>Funcionamiento<a class="headerlink" href="#funcionamiento" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Obtención del HTML:</strong> Se realiza una solicitud <code class="docutils literal notranslate"><span class="pre">GET</span></code> simulando un navegador mediante headers personalizados.</p></li>
+<li><p><strong>Análisis del HTML:</strong> Se utiliza BeautifulSoup para buscar enlaces a archivos PDF.</p></li>
+<li><p><strong>Construcción de URLs:</strong> Se genera la URL completa usando <code class="docutils literal notranslate"><span class="pre">urljoin</span></code> para cada archivo.</p></li>
+<li><p><strong>Descarga:</strong> Cada PDF se descarga mediante una nueva solicitud HTTP.</p></li>
+<li><p><strong>Almacenamiento:</strong> Los archivos se guardan localmente en una carpeta llamada <code class="docutils literal notranslate"><span class="pre">pdfs_mayo_2025</span></code>.</p></li>
+</ol>
+</section>
+<section id="estructura-del-script">
+<h2>Estructura del Script<a class="headerlink" href="#estructura-del-script" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Librerías utilizadas:</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code>: Manejo de carpetas y archivos</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requests</span></code>: Solicitudes HTTP</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code>: Análisis del contenido HTML</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urljoin</span></code>: Construcción de URLs absolutas</p></li>
+</ul>
+</li>
+<li><p><strong>Variables principales:</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code>: URL de la página a scrapear</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">output_folder</span></code>: Carpeta donde se guardarán los PDFs</p></li>
+</ul>
+</li>
+<li><p><strong>Proceso general:</strong></p>
+<ul>
+<li><p>Solicitud de la página web</p></li>
+<li><p>Análisis y extracción de enlaces <code class="docutils literal notranslate"><span class="pre">.pdf</span></code></p></li>
+<li><p>Descarga y almacenamiento en la carpeta definida</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<section id="objetivo-general-del-proyecto">
+<h1>Objetivo General del Proyecto<a class="headerlink" href="#objetivo-general-del-proyecto" title="Link to this heading"></a></h1>
+<p>El principal objetivo de Agno Municipal Agent es facilitar el acceso a la información y servicios municipales a través de una interfaz conversacional intuitiva. Este sistema busca reducir la carga operativa del personal municipal y mejorar significativamente la experiencia del ciudadano al interactuar con la administración pública.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Agente_genesis documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="Instalacion.html" class="btn btn-neutral float-right" title="Instalacion:" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2025, Bryan Sosa.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
