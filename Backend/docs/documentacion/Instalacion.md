@@ -70,11 +70,46 @@ pip install sphinxcontrib-serializinghtml==2.0.0
 pip install beautifulsoup4==4.12.2
 
 ```
-con las dependencias instaladas y con el entorno virtual activo, debes de inciar el el backend, te diriges a la carpeta backend y ejecutas el sigueinte comando: 
+
+Dentro de la carpeta de Backend, deberemos de crear un archivo `.env`, y en el debemos de crear las sigueintes variables de entorno
+
+```{code-block}
+:class: copybutton
+
+OPENROUTER_API_KEY=tu-api-key
+
+
+POSTGRES_HOST=localhost
+POSTGRES_DB=municipal_agent
+POSTGRES_USER=admin
+POSTGRES_PASSWORD=admin123
+POSTGRES_PORT=5432
+
+
+```
+
+Con las dependencias instaladas, con el entorno virtual activo y el archivo .env creado, debes de inciar el el backend, te diriges a la carpeta backend y ejecutas el sigueinte comando: 
 
 ```{code-block}
 :class: copybutton
 python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+Dentro de la carpeta de Backend, deberemos de crear un archivo .env, y en el debemos de crear las sigueintes variables de entorno
+
+```{code-block}
+:class: copybutton
+
+OPENROUTER_API_KEY=tu-api-key
+
+
+POSTGRES_HOST=localhost
+POSTGRES_DB=municipal_agent
+POSTGRES_USER=admin
+POSTGRES_PASSWORD=admin123
+POSTGRES_PORT=5432
+
+
 ```
 
 ### Docker
