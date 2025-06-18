@@ -67,6 +67,7 @@ pip install sphinxcontrib-jquery==4.1
 pip install sphinxcontrib-jsmath==1.0.1
 pip install sphinxcontrib-qthelp==2.0.0
 pip install sphinxcontrib-serializinghtml==2.0.0
+pip install myst-parser==4.0.1
 pip install beautifulsoup4==4.12.2
 
 ```
